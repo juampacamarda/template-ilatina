@@ -1,0 +1,37 @@
+#primero{
+background-color: #14B76E;
+/*padding-top: 10px;
+padding-bottom: 10px;
+height: 660px;*/
+
+}
+
+#segundo{
+background-color: rgb(205, 68, 112);
+
+}
+#tercero{
+  background-color: #14B76E;
+
+
+}
+.cabecera, #primero, #segundo, #tercero, #cuarto{
+  height:auto;
+}
+@media (min-width: 768px) {
+  .cabecera, #primero, #segundo, #tercero, #cuarto{
+    height:100vh;
+  }
+}
+
+#primero h2, #segundo h2, #tercero h2{
+  margin-bottom: 2rem;
+  margin-top: 0,5rem
+}
+#primero .cajadetexto{
+ padding:10px;}
+ 
+ .socialicon{
+   background: white;
+   color: #000000;
+ }

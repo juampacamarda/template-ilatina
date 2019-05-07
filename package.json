@@ -1,0 +1,34 @@
+{
+  "name": "juampaprueba",
+  "version": "1.0.0",
+  "description": "probandodenuevo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juampacamarda/probandopor-mi-cuenta.git"
+  },
+  "keywords": [
+    "prueba"
+  ],
+  "author": "yo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juampacamarda/probandopor-mi-cuenta/issues"
+  },
+  "homepage": "https://github.com/juampacamarda/probandopor-mi-cuenta#readme",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.0",
+    "node-sass": "^4.11.0"
+  }
+}
