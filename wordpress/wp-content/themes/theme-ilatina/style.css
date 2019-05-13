@@ -1,3 +1,30 @@
+/*
+Theme Name: theme Juan Pablo
+Theme URI: http://jpcamardaportfolio.com.ar
+Author: Juan Pablo Camarda
+Description: Plantilla responsive creada en Boostrap 4
+License: GNU General Public License v2 or later
+Text Domain: JPC-Theme
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+
+
+
+
+@font-face {
+  font-family: ilatina;
+  src: url(fonts/PTF-NORDIC-Rnd.ttf);
+}
+
+h2, .typo{
+  font-family: ilatina;
+}
+.hide{
+       display: none;
+    }
+
+.logosize{ width: 75px;}
 #primero{
 background-color: #14B76E;
 /*padding-top: 10px;
@@ -10,12 +37,32 @@ height: 660px;*/
 background-color: rgb(205, 68, 112);
 
 }
-#tercero{
-  background-color: #14B76E;
-
+.bgnegro{
+background-image: url("img/bgblack.png");
+background-repeat: repeat;
+background-color: white;
+color: white;
 
 }
-.cabecera, #primero, #segundo, #tercero, #cuarto{
+.bgblanco{
+background-image: url("img/bgwhite.png");
+background-repeat: repeat;
+background-color: white;
+}
+.textofondoblanco{
+padding: 5px;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+background-color: rgba(255, 255, 255, 0.6)
+;
+}
+
+#tercero{
+  background-color:#14B76E;
+}
+
+.cabecera, #primero, #segundo, #tercero, #cuarto, #seccion-a, #seccion-b, #seccion-c, #seccion-d{
   height:auto;
 }
 @media (min-width: 768px) {
@@ -24,14 +71,19 @@ background-color: rgb(205, 68, 112);
   }
 }
 
-#primero h2, #segundo h2, #tercero h2{
+/*#primero h2, #segundo h2, #tercero h2{
   margin-bottom: 2rem;
-  margin-top: 0,5rem
-}
+  margin-top: 0,5rem; }*/
+
 #primero .cajadetexto{
  padding:10px;}
  
- .socialicon{
+.socialicon{
    background: white;
    color: #000000;
  }
+/*details libros*/
+.details{
+  font-size: 12px;
+ 
+}
