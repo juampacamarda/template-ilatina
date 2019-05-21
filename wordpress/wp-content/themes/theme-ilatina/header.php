@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <?php wp_head();?>
 
-    <title>template juan pablo</title>
+    <title> Catálogo - ilantina </title>
   </head>
   <body>
-    <div class="cabecera home">
+    <div class="cabecera home bgblanco">
       <nav class="navbar navbar-expand-lg navbar-light">
                         <?php
                             // Display the Custom Logo
@@ -36,7 +36,7 @@
                  'container' =>'div',
                  'container_class' => 'collapse navbar-collapse',
                  'container_id' => 'navbarSupportedContent',
-                 'items_wrap' => '<ul class="navbar-nav ml-auto">%3$s</ul>',
+                 'items_wrap' => '<ul class="navbar-nav ml-auto textofondoblanco typo">%3$s</ul>',
                  'menu_class' => 'nav-item'
                 ) ); ?>
                 <!--menu dinamico-->

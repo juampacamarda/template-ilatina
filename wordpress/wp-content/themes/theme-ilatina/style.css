@@ -11,66 +11,96 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 
 
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,600i,700,700i,900');
 
 @font-face {
   font-family: ilatina;
   src: url(fonts/PTF-NORDIC-Rnd.ttf);
 }
-
-h2, .typo{
+h3, h2, .typo{
+  font-family: Montserrat;
+  font-weight: 600;
+}
+/*h2{
   font-family: ilatina;
+}*/
+
+.logosize, .footerlogo{   
+  width: 40%;
 }
-.hide{
-       display: none;
-    }
-
-.logosize{ width: 75px;}
-#primero{
-background-color: #14B76E;
-/*padding-top: 10px;
-padding-bottom: 10px;
-height: 660px;*/
-
-}
-
-#segundo{
-background-color: rgb(205, 68, 112);
-
-}
+/*.bghome{
+  background-image: url("img/bg01-eva.png");
+  background-attachment: fixed;
+  background-size: cover;
+}*/
 .bgnegro{
 background-image: url("img/bgblack.png");
 background-repeat: repeat;
 background-color: white;
 color: white;
-
+background-attachment: fixed;
+}
+.bgnegroform{
+background-image: url("img/bgblack.png");
+background-repeat: repeat;
+background-color: white;
+background-attachment: fixed;
+}
+.menubg{
+  background-color: rgba(0, 0, 0, 0.4);
+  color:white;
+}
+.menubg a{
+  color: white;
+}
+.menubg a:hover{
+  color: darkgray;
 }
 .bgblanco{
 background-image: url("img/bgwhite.png");
 background-repeat: repeat;
 background-color: white;
+background-attachment: fixed;
 }
 .textofondoblanco{
 padding: 5px;
 border-radius: 10px 10px 10px 10px;
 -moz-border-radius: 10px 10px 10px 10px;
 -webkit-border-radius: 10px 10px 10px 10px;
-background-color: rgba(255, 255, 255, 0.6)
-;
+background-color: rgba(255, 255, 255, 0.6);
 }
-
-#tercero{
-  background-color:#14B76E;
+.textofondonegro{
+padding: 5px;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+background-color: rgba(0, 0, 0, 0.2);
 }
-
 .cabecera, #primero, #segundo, #tercero, #cuarto, #seccion-a, #seccion-b, #seccion-c, #seccion-d{
   height:auto;
 }
+ .rescalaimg{
+  width:50%;   
+  }
 @media (min-width: 768px) {
-  .cabecera, #primero, #segundo, #tercero, #cuarto{
+   #primero, #cuarto{
     height:100vh;
   }
+  .rescalaimg{
+  width:100%;   
+  }
+ 
 }
-
+.textonegro{
+  color: black;
+}
+.card-body a, .card-header a{
+color: black;
+}
+.card-body a:hover, .card-header a:hover {
+  color: darkgrey;
+  text-decoration: none;
+}
 /*#primero h2, #segundo h2, #tercero h2{
   margin-bottom: 2rem;
   margin-top: 0,5rem; }*/
@@ -87,3 +117,5 @@ background-color: rgba(255, 255, 255, 0.6)
   font-size: 12px;
  
 }
+/*slider bg*/
+.wpcf7-form input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], select, textarea {width:100% !important;}

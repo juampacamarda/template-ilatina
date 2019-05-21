@@ -3,22 +3,20 @@
 Template Name: inicio-plantilla
 */
 ?>
-<?php get_header();?> 
-
-
+<?php get_header('home');?> 
     <!--inicio primer bloque--> 
-    <div id="primero" class="d-flex " >
+    <div id="primero" class="d-flex  bgblanco" >
       <div class="container d-flex align-items-center my-5">
-        <div class="row">
-          <div class="foto col-12 col-md-5">
+        <div class="row justify-content-center">
+          <div class="foto col-12 col-md-4">
             <?php if ( get_field( 'imagen_primer_bloque') ) { ?>
-	        <img class="mx-auto d-block img-fluid" src="<?php the_field( 'imagen_primer_bloque' ); ?>" / >
+	        <img class="mx-auto d-block rescalaimg img-fluid" src="<?php the_field( 'imagen_primer_bloque' ); ?>"/>
             <?php } ?>
           </div>
           <div class="col-12 col-md-6 align-self-center cajadetexto">
-            <h2 class="text-center"><?php the_field( 'titulo_bloque_1' ); ?></h2>
-            <p class="text-justify px-1"><?php the_field( 'texto_primero' ); ?></p>
-             <div class="d-flex">
+            <h2 class="text-center textofondoblanco"><?php the_field( 'titulo_bloque_1' ); ?></h2>
+            <p class="text-justify textofondoblanco"><?php the_field( 'texto_primero' ); ?></p>
+            <div class="d-flex">
               <button type="button" class="btn btn-primary ml-auto my-3">Leer Más</button>
             </div>
           </div>
@@ -27,11 +25,11 @@ Template Name: inicio-plantilla
     </div>
     <!--fin primer bloque-->
     <!--segundo bloque-->
-    <section id="segundo" class="d-flex align-items-center pt-5">
+    <section id="segundo" class="d-flex align-items-center bgnegro">
       <div  class="container my-5">
         <div class="row justify-content-center">
           <div class=" col-12 col-md-10 mb-3">
-            <h2 class="text-center"><?php the_field( 'titulo_bloque_2' ); ?></h2>
+            <h2><?php the_field( 'titulo_bloque_2' ); ?></h2>
             <p class="text-justify"><?php the_field( 'texto_SEGUNDO' ); ?></p>
                  <?php if ( get_field( 'imagen_segundo_bloque') ) { ?>
 	            <img class="img-fluid" src="<?php the_field( 'imagen_segundo_bloque' ); ?>" />
@@ -47,59 +45,57 @@ Template Name: inicio-plantilla
 
     <!--fin segudno bloque-->
     <!--empieza tercer bloque-->
-    <section id="tercero" class="d-flex align-items-center">
+    <section id="tercero" class="d-flex align-items-center bgblanco">
       <div class="container my-5">
-        <h2 class="text-center">probando uno DOS</h2>
-        <div class="row justify-content-center">
-          <div class="col-12 col-sm-6 col-md-5 mb-3">
-          <div class="card">
-           <img src="img/image940.jpg" class="card-img-top img-fluid" alt="imagen">
-           <div class="card-body">
-             <h5 class="card-title text-center">Card title</h5>
+          
+          <div class="row justify-content-center">
+          <div class="col-md-10">
+            <h2>Nos Livres</h2>
           </div>
+                    <?php
+                    $args = array( 'post_type' => 'libros', 'posts_per_page' => 4 );
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post();?>
+                       <div class="col-12 col-md-3 mb-3">
+                          <div class="card  h-100">
+                         <?php if ( get_field( 'portada_libro') ) { ?>
+                            <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
+                          <?php } ?>
+                              <div class="card-body">
+                               <a href="<?php the_permalink(); ?>">
+                               <h5 class="text-center"><?php the_title(); ?></h5>
+                               </a>
+                               <p class="text-center"><?php the_field( 'autor_de_libro' ); ?></p>
+                              </div>
+                          </div>
+                        </div>
+                    <?php endwhile;
+                    wp_reset_postdata();?>
+                      <!-- escondo para probar<div class="col-12 col-sm-6 col-md-5 mb-3">
+                      </div> -->
+           
           </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-5 mb-3">
-          <div class="card">
-           <img src="img/image940.jpg" class="card-img-top img-fluid" alt="imagen">
-           <div class="card-body">
-             <h5 class="card-title text-center">Card title</h5>
-           </div>
-          </div>
-          </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
     <!--fin tercero-->
         <!--cuarto-->
-    <section id="cuarto" class="d-flex align-items-center">
-      <div class="container py-2 px-2">
-        <div class="row justify-content-center justify-content-md-end">
-          <div class="card pt-3 pb-5 px-5">
-              <div class="card-block">
-                <h2 class="mb-2">probando uno DOS</h2>
-
-                  <form role="form">
-                      <div class="form-group">
-                          <label class="form-control-label" for="form-group-input">Name</label>
-                          <input type="text" class="form-control" id="form-group-input" name="name">
-                      </div>
-                      <div class="form-group">
-                          <label class="form-control-label" for="form-group-input">Email</label>
-                          <input type="text" class="form-control" id="form-group-input" name="email">
-                      </div>
-                      <div class="form-group">
-                          <label class="form-control-label" for="form-group-input">Notes</label>
-                          <textarea class="form-control" id="form-group-input" name="notes" rows="6"></textarea>
-                      </div>
-                      <div class="d-flex">
-                       <button type="button" class="btn btn-primary ml-auto my-3">Leer Más</button>
-                     </div>
-                  </form>
+    <section id="cuarto" class="d-flex align-items-center bgnegroform">
+      <div class="container my-3">
+        <div class="row justify-content-center">
+          <div class="col-md-6"></div>
+        <div class="col-md-4 justify-content-md-end ">
+          <div class="card p-2">
+              <div class="card-block contacto">
+                <h2 class="mb-5">probando uno DOS</h2>
+                <?php the_field( 'contacto' ); ?>
+                <!--
+                  <//?php echo do_shortcode('[contact-form-7 id="50" title="contacto"]'); ?> 
+              -->
               </div>
           </div>
         </div>
+        </div>  
       </div>
     </section>
         <!--fin cuarto-->

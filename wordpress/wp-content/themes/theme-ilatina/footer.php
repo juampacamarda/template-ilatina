@@ -2,15 +2,19 @@
 <!-- Footer -->
     <footer class="page-footer font-small bg-dark">
         <!-- Footer Elements -->
-        <div class="py-4 px-3">
+        <div class="px-3">
           <!-- Grid row-->
           <div class="row d-flex align-items-center justify-content-between justify-content-md-between">
-            <div class="col-4 col-md-1">
-              <?php the_custom_logo();?>
+            <div class="col-12 col-md-4">
+                <?php
+                if(is_active_sidebar('footerlogo')){
+                dynamic_sidebar('footerlogo');
+                }
+                ?>
             </div>
             <!-- Grid column -->
-            <div class=" col-4 col-md-2 text-light">
-              <div class="d-flex justify-content-end">
+            <div class=" col-12 col-md-2 text-light pb-2 pt-md-4">
+              <div class="d-flex justify-content-center justify-md-content-end">
                 <a href="#" class=" py-1 px-2  mr-2 mr-md-4 socialicon fa fa-facebook"></a>
                 <a href="#" class=" py-1 px-2 socialicon fa fa-twitter"></a>
               </div>
