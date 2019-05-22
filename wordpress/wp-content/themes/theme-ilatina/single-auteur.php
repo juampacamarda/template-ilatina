@@ -12,8 +12,7 @@
 							<img class="img-fluid rounded-circle" src="<?php the_field( 'foto_de_autor' ); ?>" />
 						<?php } ?>
                     </div>
-                    <div class="col-12 col-md-10 col-lg-6">
-                        
+                    <div class="col-12 col-md-10 col-lg-6 align-self-center">
                         <p class="text-justify textofondoblanco">
 							<?php the_field( 'bio_de_autor' ); ?>
                         </p>
@@ -42,9 +41,9 @@
 
                        <div class="col-12 col-md-4 mb-3 textonegro">
                           <div class="card h-100">
-                         <?php if ( get_field( 'foto_de_autor') ) { ?>
-                        <img src="<?php the_field( 'foto_de_autor' ); ?>" alt="Auteur" class="card-img-top img-fluid" alt="imagen" />
-                          <?php } ?>
+                        <?php if ( get_field( 'portada_libro') ) { ?>
+                            <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
+                        <?php } ?>
                               <div class="card-body">
                                <a href="<?php the_permalink(); ?>">
                                <h5 class="text-center"><?php the_title(); ?></h5>

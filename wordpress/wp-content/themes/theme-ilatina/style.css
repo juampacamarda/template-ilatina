@@ -94,10 +94,10 @@ background-color: rgba(0, 0, 0, 0.2);
 .textonegro{
   color: black;
 }
-.card-body a, .card-header a{
+.card-body a, .autores a{
 color: black;
 }
-.card-body a:hover, .card-header a:hover {
+.card-body a:hover, .autores a:hover {
   color: darkgrey;
   text-decoration: none;
 }
