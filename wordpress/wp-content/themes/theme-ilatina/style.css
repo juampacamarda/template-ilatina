@@ -1,5 +1,5 @@
 /*
-Theme Name: theme Juan Pablo
+Theme Name: JPC-theme
 Theme URI: http://jpcamardaportfolio.com.ar
 Author: Juan Pablo Camarda
 Description: Plantilla responsive creada en Boostrap 4
@@ -19,7 +19,11 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 }
 h3, h2, .typo{
   font-family: Montserrat;
-  font-weight: 600;
+  font-weight: 700;
+}
+p{
+  font-family: Montserrat;
+  font-weight: 400;
 }
 /*h2{
   font-family: ilatina;
