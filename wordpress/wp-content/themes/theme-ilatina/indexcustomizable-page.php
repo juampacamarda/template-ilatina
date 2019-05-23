@@ -43,7 +43,7 @@ Template Name: inicio-plantilla
                   <div class="colection-header">
                     <h3 class="text-center"><?php the_title(); ?></h3>
                   </div><!--fin colheader-->
-                  <div class="colection-img">
+                  <div class="colection-img mb-3">
                     <?php if ( get_field( 'img_collection') ) { ?>
                     <img class="img-fluid rounded mx-auto" src="<?php the_field( 'img_collection' ); ?>" />
                     <?php } ?>
@@ -52,7 +52,7 @@ Template Name: inicio-plantilla
                     <p><?php the_field( 'txt_collection' ); ?></p>
                   </div>
                   <div class="colecction-link mt-auto w-100">
-                    <a href="<?php the_permalink(); ?>" role="button" class="w-100 active btn btn-primary ml-auto">Leer Más</a>
+                    <a href="<?php the_permalink(); ?>" role="button" class="w-100 black-background white active btn btn-light ml-auto">Leer Más</a>
                   </div>
                 </div>
                 <?php endwhile; endif; ?>

@@ -13,10 +13,6 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,600i,700,700i,900');
 
-@font-face {
-  font-family: ilatina;
-  src: url(fonts/PTF-NORDIC-Rnd.ttf);
-}
 h3, h2, h1, h4, h5, .typo{
   font-family: Montserrat;
   font-weight: 700;
@@ -66,6 +62,7 @@ background-attachment: fixed;
 .autores H4{
   font-size: 24px;
 }
+
 /*hover fotos autores*/
 .autores-coleccion a, .autores a{
   position: relative;
