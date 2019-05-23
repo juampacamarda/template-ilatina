@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <div class="bgblanco home">
+    <header class="bgblanco home">
         <nav class="navbar  navbar-expand-lg navbar-light">
             <?php
                             // Display the Custom Logo
@@ -47,30 +47,5 @@
                 ) ); ?>
                 <!--menu dinamico-->
         </nav>
-        <div class="d-flex align-items-center">
-            <div class="container my-5">
-                <h2 class="col-md-10"><?php the_title(); ?></h2>
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10 col-lg-4">
-                        <?php $protada_libro = get_field( 'protada_libro' ); ?>
-                        <?php if ( $protada_libro ) { ?>
-                            <img class="img-fluid" src="<?php echo $protada_libro['url']; ?>" alt="<?php echo $protada_libro['alt']; ?>" />
-                        <?php } ?>
-
-                       <p class="details ml-auto textofondoblanco">
-                           <?php the_field( 'ficha_tecnica' ); ?>
-                       </p>
-                    </div>
-                    <div class="col-12 col-md-10 col-lg-6">
-                        
-                        <p class="text-justify textofondoblanco">
-                            <?php the_field( 'descripcion_corta' ); ?>
-                        </p>
-                    </div>
-            
-                </div>
-            </div>
-        </div>
-        
-    </div>
+    </header>
     <!--fin cabecera-->

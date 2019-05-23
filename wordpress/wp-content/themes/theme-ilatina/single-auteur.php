@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php get_header(posts); ?>
 
 <section id="primero" class="bgblanco d-flex align-items-center">
             <div class="container my-5">
@@ -7,7 +7,6 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-4">
-                        <?php $protada_libro = get_field( 'protada_libro' ); ?>
                         <?php if ( get_field( 'foto_de_autor') ) { ?>
 							<img class="img-fluid rounded-circle" src="<?php the_field( 'foto_de_autor' ); ?>" />
 						<?php } ?>
@@ -40,7 +39,7 @@
 					<!-- Stuff happening inside the loop -->
 
                        <div class="col-12 col-md-4 mb-3 textonegro">
-                          <div class="card h-100">
+                          <div class="card h-100 bgblanco">
                         <?php if ( get_field( 'portada_libro') ) { ?>
                             <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
                         <?php } ?>

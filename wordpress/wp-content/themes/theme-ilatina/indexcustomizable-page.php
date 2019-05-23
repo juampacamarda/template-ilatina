@@ -28,17 +28,36 @@ Template Name: inicio-plantilla
     <section id="segundo" class="d-flex align-items-center bgnegro">
       <div  class="container my-5">
         <div class="row justify-content-center">
-          <div class=" col-12 col-md-10 mb-3">
-            <h2><?php the_field( 'titulo_bloque_2' ); ?></h2>
-            <p class="text-justify"><?php the_field( 'texto_SEGUNDO' ); ?></p>
-                 <?php if ( get_field( 'imagen_segundo_bloque') ) { ?>
-	            <img class="img-fluid" src="<?php the_field( 'imagen_segundo_bloque' ); ?>" />
-                <?php } ?>
-
-                 <div class="d-flex">
-                  <button type="button" class="btn btn-primary ml-auto my-3">Leer Más</button>
+            <div class="col-md-10">
+              <h2>Collections</h2>
+            </div>
+            <!--loop por categoria -->
+                <?php
+                $args = array(
+                'post_type' => 'collection',
+                );
+                query_posts($args); ?>
+                <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
+                <!-- Stuff happening inside the loop -->
+                <div class="collection-ini col-12 col-md-5 mb-3 d-flex align-items-start flex-column">
+                  <div class="colection-header">
+                    <h3 class="text-center"><?php the_title(); ?></h3>
+                  </div><!--fin colheader-->
+                  <div class="colection-img">
+                    <?php if ( get_field( 'img_collection') ) { ?>
+                    <img class="img-fluid rounded mx-auto" src="<?php the_field( 'img_collection' ); ?>" />
+                    <?php } ?>
+                  </div>
+                  <div class="colection-txt">
+                    <p><?php the_field( 'txt_collection' ); ?></p>
+                  </div>
+                  <div class="colecction-link mt-auto w-100">
+                    <a href="<?php the_permalink(); ?>" role="button" class="w-100 active btn btn-primary ml-auto">Leer Más</a>
+                  </div>
                 </div>
-          </div>
+                <?php endwhile; endif; ?>
+                <?php wp_reset_query(); ?>
+            <!--Fin loop por categoria -->
         </div>
       </div>
     </section>
@@ -52,15 +71,16 @@ Template Name: inicio-plantilla
           <div class="col-md-10">
             <h2>Nos Livres</h2>
           </div>
+          <!--empieza el loop que trae los libros-->
                     <?php
                     $args = array( 'post_type' => 'libros', 'posts_per_page' => 4 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();?>
                        <div class="col-12 col-md-3 mb-3">
                           <div class="card  h-100">
-                         <?php if ( get_field( 'portada_libro') ) { ?>
-                            <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
-                          <?php } ?>
+                            <?php if ( get_field( 'portada_libro') ) { ?>
+                                <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
+                              <?php } ?>
                               <div class="card-body">
                                <a href="<?php the_permalink(); ?>">
                                <h5 class="text-center"><?php the_title(); ?></h5>

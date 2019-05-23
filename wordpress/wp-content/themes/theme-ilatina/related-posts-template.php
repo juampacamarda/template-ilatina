@@ -1,25 +1,9 @@
-<?php if (!empty($related_posts)) { ?>
-    <div class="related-posts">
-        <h3 class="widget-title"><?php _e('Related articles', 'JPC-Theme'); ?></h3>
+<h3><?php the_title(); ?></h3>
 
-        <ul class="related-posts-list">
-            <?php
-            foreach ($related_posts as $post) {
-                setup_postdata($post);
-            ?>
-            <li>
-                <a class="title" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                    <?php if (has_post_thumbnail()) { ?>
-                    <div class="thumb">
-                        <?php echo get_the_post_thumbnail(null, 'medium', array('alt' => the_title_attribute(array('echo' => false)))); ?>
-                    </div>
-                    <?php } ?>
-                    <h4><?php the_title(); ?></h4>
-                </a>
-            </li>
-            <?php } ?>
-        </ul>
-        <div class="clearfix"></div>
-    </div>
-<?php
-}
+                  <?php if ( get_field( 'img_collection') ) { ?>
+                    <img class="img-fluid mx-auto" src="<?php the_field( 'img_collection' ); ?>" />
+                  <?php } ?>
+                    <p class="text-justify"><?php the_field( 'txt_collection' ); ?></p>
+                <div class="align-self-end">
+                    <button type="button" class="btn btn-primary ml-auto">Leer Más</button>
+                </div>

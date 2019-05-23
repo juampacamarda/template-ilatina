@@ -17,7 +17,7 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
   font-family: ilatina;
   src: url(fonts/PTF-NORDIC-Rnd.ttf);
 }
-h3, h2, .typo{
+h3, h2, h1, h4, h5, .typo{
   font-family: Montserrat;
   font-weight: 700;
 }
@@ -60,6 +60,37 @@ background-attachment: fixed;
 .menubg a:hover{
   color: darkgray;
 }
+.autores-coleccion h4{
+  font-size: 24px;
+}
+.autores H4{
+  font-size: 24px;
+}
+/*hover fotos autores*/
+.autores-coleccion a, .autores a{
+  position: relative;
+  display:inline-block;
+}
+.autores-coleccion a span, .autores a span{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:white;
+  text-shadow: 3px 5px 7px rgba(0,0,0,0.79);
+  display:none;
+}
+.autores-coleccion a:hover, .autores a:hover{
+  border-radius:50%;
+  background: rgb(0, 0, 0);
+}
+.autores-coleccion a:hover span, .autores a:hover span {
+  display:block;
+}
+.autores-coleccion a:hover img, .autores a:hover img{
+  opacity: 0.7;
+}
+/*fin hover fotos autores*/
 .bgblanco{
 background-image: url("img/bgwhite.png");
 background-repeat: repeat;
@@ -98,10 +129,10 @@ background-color: rgba(0, 0, 0, 0.2);
 .textonegro{
   color: black;
 }
-.card-body a, .autores a{
+.card-body a{
 color: black;
 }
-.card-body a:hover, .autores a:hover {
+.card-body a:hover {
   color: darkgrey;
   text-decoration: none;
 }

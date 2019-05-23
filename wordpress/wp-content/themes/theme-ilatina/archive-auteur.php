@@ -14,7 +14,7 @@
                               <?php if ( get_field( 'foto_de_autor') ) { ?>
                                 <img src="<?php the_field( 'foto_de_autor' ); ?>" alt="Auteur" class="rounded-circle img-fluid" alt="imagen" />
                             <?php } ?>
-                                  <h4 class="textofondoblanco mt-1 text-center"><?php the_title(); ?></h4>
+                            <span><h4 class="text-center"><?php the_title(); ?></h4></span>
                             </a>
                           </div>
                         </div>

@@ -1,4 +1,4 @@
-<?php get_header( ); ?>
+<?php get_header(posts); ?>
     <section class="bgblanco d-flex align-items-center">
             <div class="container my-5">
                 <div class="col-md-10">

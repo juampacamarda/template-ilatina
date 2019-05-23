@@ -129,7 +129,7 @@ function add_my_post_types_to_query( $query ) {
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
 //empezo nuevo post_type
-//post-type libros
+//post-type Auteur
 if ( ! function_exists('auteur_post_type') ) {
 
 // Register Custom Post Type
@@ -189,7 +189,66 @@ function auteur_post_type() {
 add_action( 'init', 'auteur_post_type', 0 );
 
 }
-//related posts
+//post collections
+if ( ! function_exists('collection_post_type') ) {
+
+// Register Custom Post Type
+function collection_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'collection', 'Post Type General Name', 'text_domain' ),
+		'singular_name'         => _x( 'collection', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'             => __( 'collections', 'text_domain' ),
+		'name_admin_bar'        => __( 'collections', 'text_domain' ),
+		'archives'              => __( 'Catálogo collections', 'text_domain' ),
+		'attributes'            => __( 'Atributo de collection', 'text_domain' ),
+		'parent_item_colon'     => __( 'padre de collection:', 'text_domain' ),
+		'all_items'             => __( 'Catálogo Completo de collections', 'text_domain' ),
+		'add_new_item'          => __( 'Añadir Nuevo collection', 'text_domain' ),
+		'add_new'               => __( 'Nuevo collection', 'text_domain' ),
+		'new_item'              => __( 'Nuevo collection', 'text_domain' ),
+		'edit_item'             => __( 'Editar collection', 'text_domain' ),
+		'update_item'           => __( 'Actualizar collection', 'text_domain' ),
+		'view_item'             => __( 'Ver collection', 'text_domain' ),
+		'view_items'            => __( 'Ver collections', 'text_domain' ),
+		'search_items'          => __( 'Buscar collection', 'text_domain' ),
+		'not_found'             => __( 'collection No Encontrado', 'text_domain' ),
+		'not_found_in_trash'    => __( 'collection no Encontrado', 'text_domain' ),
+		'featured_image'        => __( 'Imagen Destacada', 'text_domain' ),
+		'set_featured_image'    => __( 'Elegir Imagen Destacada', 'text_domain' ),
+		'remove_featured_image' => __( 'Eliminar Imagen Destacada', 'text_domain' ),
+		'use_featured_image'    => __( 'Usar Imagen Destacada', 'text_domain' ),
+		'insert_into_item'      => __( 'Insertar en collection', 'text_domain' ),
+		'uploaded_to_this_item' => __( 'Actualizar en collection', 'text_domain' ),
+		'items_list'            => __( 'Lista de collections', 'text_domain' ),
+		'items_list_navigation' => __( 'Lista Navegable de collections', 'text_domain' ),
+		'filter_items_list'     => __( 'Filtro de lista de collections', 'text_domain' ),
+	);
+	$args = array(
+		'label'                 => __( 'collection', 'text_domain' ),
+		'description'           => __( 'catálogo de collections', 'text_domain' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+		'taxonomies'            => array( 'category', 'post_tag' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => false,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'post',
+	);
+	register_post_type( 'collection', $args );
+
+}
+add_action( 'init', 'collection_post_type', 0 );
+
+}
 
   //abajo termina el php
 ?>
