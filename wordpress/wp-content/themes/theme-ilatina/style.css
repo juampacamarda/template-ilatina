@@ -76,6 +76,13 @@ background-attachment: fixed;
   border: 0;
   border-top: 1px solid rgb(255, 252, 252);
 }
+#news a{
+  color: black;
+}
+#news a:hover{
+  color:darkgray;
+  text-decoration: none;
+}
 /*hover fotos autores*/
 .autores-coleccion a, .autores a{
   position: relative;

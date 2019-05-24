@@ -5,7 +5,7 @@ Template Name: inicio-plantilla
 ?>
 <?php get_header('home');?> 
     <!--inicio primer bloque--> 
-    <div id="primero" class="d-flex  bgblanco" >
+    <section id="primero" class="d-flex  bgblanco" >
       <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center">
           <div class="foto col-12 col-md-5 align-self-center">
@@ -19,8 +19,54 @@ Template Name: inicio-plantilla
           </div>
         </div>
       </div>
-    </div>
     <!--fin primer bloque-->
+      <!--empieza news-->
+    </section>
+     <?php if (get_field('news')) : ?>
+    <section id="news" class="d-flex  bgblanco">
+    <div class="container d-flex align-items-center my-5">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+              <h2><?php the_field( 'news' ); ?></h2>
+          </div>
+        <?php
+        $entradas = new WP_Query( 'posts_per_page=4' ); 
+        // The Loop
+        while ( $entradas->have_posts() ) : 
+        $entradas->the_post(); ?>
+        <div class="col-md-3 h-100">
+          <a href="<?php the_permalink() ?>">
+          <div class="card p-1">
+            <div class="card-tittle pt-2 text-center">
+              <h4>
+                <?php the_title();?>
+              </h4>
+            </div>
+          <?php if ( has_post_thumbnail() ) {
+           the_post_thumbnail('post-thumbnails', array('class' =>'img-fluid card-img-top')); }
+          ?></a>
+            <div class="card-block">
+              <div class="card-text text-justify">
+                <?php the_excerpt();?>
+              </div>
+
+            </div>
+            
+          </div>
+           
+        </div>
+        <?php
+        endwhile;
+        // Resetear Post Data 
+         wp_reset_postdata(); // The Loop termina ?>
+
+        </div><!--finrownews-->  
+      </div>  
+    
+    </section>
+      <?php endif ?>
+    <!--fin news-->
+
     <!--segundo bloque-->
     <section id="segundo" class="d-flex align-items-center bgnegro">
       <div  class="container my-5">
