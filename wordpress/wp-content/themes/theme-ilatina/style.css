@@ -24,7 +24,21 @@ p{
 /*h2{
   font-family: ilatina;
 }*/
-
+/*sticky footer*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: 150px; /* Margin bottom by footer height */
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  line-height: auto; /* Vertically center the text there */
+}
 .logosize, .footerlogo{   
   width: 40%;
 }
@@ -54,6 +68,12 @@ background-attachment: fixed;
   color: white;
 }
 .menubg a:hover{
+  color: darkgray;
+}
+.link a{
+  color:black!important;
+}
+.link a:hover{
   color: darkgray;
 }
 .autores-coleccion h4{
@@ -141,8 +161,18 @@ background-color: rgba(0, 0, 0, 0.2);
   .rescalaimg{
   width:100%;   
   }
- 
+ body {
+  margin-bottom: 100px; /* Margin bottom by footer height */
 }
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  line-height: 100px; /* Vertically center the text there */
+}
+}
+
 .textonegro{
   color: black;
 }

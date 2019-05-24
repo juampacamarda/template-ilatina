@@ -1,6 +1,6 @@
 <?php wp_footer(); ?>
 <!-- Footer -->
-    <footer class="page-footer font-small bg-dark">
+    <footer class="footer page-footer font-small bg-dark">
         <!-- Footer Elements -->
         <div class="px-3">
           <!-- Grid row-->
