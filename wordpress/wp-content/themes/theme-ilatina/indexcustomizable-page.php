@@ -8,17 +8,14 @@ Template Name: inicio-plantilla
     <div id="primero" class="d-flex  bgblanco" >
       <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center">
-          <div class="foto col-12 col-md-4">
+          <div class="foto col-12 col-md-5 align-self-center">
             <?php if ( get_field( 'imagen_primer_bloque') ) { ?>
 	        <img class="mx-auto d-block rescalaimg img-fluid" src="<?php the_field( 'imagen_primer_bloque' ); ?>"/>
             <?php } ?>
           </div>
-          <div class="col-12 col-md-6 align-self-center cajadetexto">
+          <div class="col-12 col-md-5 align-self-center cajadetexto">
             <h2 class="text-center textofondoblanco"><?php the_field( 'titulo_bloque_1' ); ?></h2>
             <p class="text-justify textofondoblanco"><?php the_field( 'texto_primero' ); ?></p>
-            <div class="d-flex">
-              <button type="button" class="btn btn-primary ml-auto my-3">Leer Más</button>
-            </div>
           </div>
         </div>
       </div>

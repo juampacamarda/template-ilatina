@@ -2,7 +2,7 @@
 
 <section id="tercero" class="d-flex  bgblanco">
       <div class="container my-5">
-        <h2 class="textofondoblanco">Catálogo</h2>
+        <h2 class="textofondoblanco">Nos livres</h2>
           <div class="row justify-content-center">
                     <?php
                     $args = array( 'post_type' => 'libros' );

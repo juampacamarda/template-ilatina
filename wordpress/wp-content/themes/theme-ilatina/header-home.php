@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
    
     <?php wp_head();?>
     <script>
@@ -40,7 +41,7 @@
                 <?php wp_nav_menu(array(
                  'theme_location' => 'superior',
                  'container' =>'div',
-                 'container_class' => 'collapse navbar-collapse',
+                 'container_class' => 'collapse navbar-collapse p-3',
                  'container_id' => 'navbarSupportedContent',
                  'items_wrap' => '<ul class="navbar-nav ml-auto textofondoblanco typo">%3$s</ul>',
                  'menu_class' => 'nav-item'
@@ -58,19 +59,11 @@
                         <?php if ( get_field( 'imagen01') ) { ?>
                             <img src="<?php the_field( 'imagen01' ); ?>" alt="First slide" class="img-fluid d-block w-100" />
                         <?php } ?>
-                        <div class="carousel-caption textofondonegro d-none d-md-block">
-                            <h5>EVARISTO</h5>
-                            <p>Solano Lopez - Sampayo</p>
-                        </div>
                         </div>
                         <div class="carousel-item">
                         <?php if ( get_field( 'imagen02') ) { ?>
                             <img src="<?php the_field( 'imagen02' ); ?>" alt="Second slide" class="img-fluid d-block w-100" />
                         <?php } ?>
-                        <div class="carousel-caption textofondonegro d-none d-md-block">
-                            <h5>EVARISTO</h5>
-                            <p>Solano Lopez - Sampayo</p>
-                        </div>
                         </div>
                     </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

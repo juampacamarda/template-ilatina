@@ -1,4 +1,10 @@
 <?php
+if (function_exists('register_nav_menus')){
+	register_nav_menus (array('superior'=>'Menu Principal Superior'));
+}
+if ( function_exists( 'add_theme_support' ) ) { 
+		add_theme_support( 'post-thumbnails' );
+}
 // Adding Shortcodes to the_excerpt() function
 add_filter('the_excerpt', 'do_shortcode');
 add_filter('acf/format_value/type=textarea', 'do_shortcode');
@@ -22,7 +28,7 @@ function mytheme_setup() {
 	'header-text' => array( 'site-title', 'site-description' ),
 ) );}
 
-
+ 
 add_action('after_setup_theme', 'mytheme_setup');
 //cambiar la clase del logo
 add_filter( 'get_custom_logo', 'change_logo_class' );
