@@ -30,13 +30,13 @@ html {
   min-height: 100%;
 }
 body {
-  margin-bottom: 150px; /* Margin bottom by footer height */
+  margin-bottom: 100px; /* Margin bottom by footer height */
 }
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: auto;
+  height: 100px;
   line-height: auto; /* Vertically center the text there */
 }
 .logosize, .footerlogo{   
@@ -161,18 +161,20 @@ background-color: rgba(0, 0, 0, 0.2);
   .rescalaimg{
   width:100%;   
   }
- body {
-  margin-bottom: 100px; /* Margin bottom by footer height */
+  body {
+    margin-bottom: 100px; /* Margin bottom by footer height */
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    line-height: 100px; /* Vertically center the text there */
+  }
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  line-height: 100px; /* Vertically center the text there */
+#post{
+  min-height: 440px;
 }
-}
-
 .textonegro{
   color: black;
 }

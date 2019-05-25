@@ -25,7 +25,7 @@ Template Name: inicio-plantilla
      <?php if (get_field('news')) : ?>
     <section id="news" class="d-flex  bgblanco">
     <div class="container d-flex align-items-center my-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center row-eq-height">
           <div class="col-md-10">
               <h2><?php the_field( 'news' ); ?></h2>
           </div>

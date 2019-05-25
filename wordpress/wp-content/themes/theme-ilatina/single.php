@@ -1,6 +1,6 @@
 <?php get_header(posts); ?>
 
-<section id="post" class="bgblanco d-flex align-items-center">
+<section id="post" class="bgblanco d-flex align-items-start">
             <div class="container">
                 <div class="row my-3 row-eq-height justify-content-between">
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
