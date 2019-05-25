@@ -35,7 +35,10 @@
                                     wp_reset_postdata();
                                     ?>
                                     <div class="mt-auto ml-auto">
-                                        <a href=""> Leer Más </a>
+                                    <?php $link_a_archivo = get_field( 'link_a_archivo' ); ?>
+                                    <?php if ( $link_a_archivo ) { ?>
+                                        <a href="<?php echo $link_a_archivo['url']; ?>" target="<?php echo $link_a_archivo['target']; ?>">Leer Más</a>
+                                    <?php } ?>                                    
                                     </div>
 
                             </div>
