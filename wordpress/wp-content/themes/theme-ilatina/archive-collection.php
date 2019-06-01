@@ -25,7 +25,7 @@
                                         <p><?php the_field( 'txt_collection' ); ?></p>
                                     </div>
                                     <div class="colecction-link mt-auto w-100">
-                                        <a href="<?php the_permalink(); ?>" role="button" class="w-100 active btn btn-dark ml-auto">Leer Más</a>
+                                        <a href="<?php the_permalink(); ?>" role="button" class="w-100 active btn btn-dark ml-auto">Lire Plus</a>
                                     </div>
                               </div>
                           </div>

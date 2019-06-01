@@ -37,7 +37,7 @@
                                     <div class="mt-auto ml-auto">
                                     <?php $link_a_archivo = get_field( 'link_a_archivo' ); ?>
                                     <?php if ( $link_a_archivo ) { ?>
-                                        <a href="<?php echo $link_a_archivo['url']; ?>" target="<?php echo $link_a_archivo['target']; ?>">Leer Más</a>
+                                        <a href="<?php echo $link_a_archivo['url']; ?>" target="<?php echo $link_a_archivo['target']; ?>">Lire plus</a>
                                     <?php } ?>                                    
                                     </div>
 
@@ -45,5 +45,6 @@
                     </div>
             </div>
 </section>
-
+</div><!-- fin main -->
+</div><!-- Fin wrapper -->
 <?php get_footer();?>

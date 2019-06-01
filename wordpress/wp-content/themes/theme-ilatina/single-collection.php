@@ -38,18 +38,18 @@
 					<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 					<!-- Stuff happening inside the loop -->
 
-                       <div class="col-12 col-md-4 mb-3 textonegro">
+                       <div class="librohome col-12 col-md-4 mb-3 textonegro">
+                         <a href="<?php the_permalink(); ?>">
                           <div class="card h-100 bgblanco">
-                        <?php if ( get_field( 'portada_libro') ) { ?>
-                            <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
-                        <?php } ?>
+                            <?php if ( get_field( 'portada_libro') ) { ?>
+                                <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
+                            <?php } ?>
                               <div class="card-body">
-                               <a href="<?php the_permalink(); ?>">
                                <h5 class="text-center"><?php the_title(); ?></h5>
-                               </a>
                                <p class="text-center"><?php the_field( 'autor_de_libro' ); ?></p>
                               </div>
                           </div>
+                          </a>
                         </div>
                     <?php endwhile; endif; ?>
 					<?php wp_reset_query(); ?>

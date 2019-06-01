@@ -8,18 +8,20 @@
                     $args = array( 'post_type' => 'libros' );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();?>
-                       <div class="col-6 col-md-3">
+                       <div class="librohome col-6 col-md-3">
+                         <a href="<?php the_permalink(); ?>">
                           <div class="card">
                           <?php if ( get_field( 'portada_libro') ) { ?>
                             <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
                           <?php } ?>
                               <div class="card-body">
-                               <a href="<?php the_permalink(); ?>">
+                               
                                <h4 class="card-title text-center"><?php the_title(); ?></h4>
-                               </a>
+                               
                                <p class="card-text text-center"><?php the_field( 'autor_de_libro' ); ?></p>
                               </div>
                           </div>
+                          </a>
                         </div>
                     <?php endwhile;
                     wp_reset_postdata();?>

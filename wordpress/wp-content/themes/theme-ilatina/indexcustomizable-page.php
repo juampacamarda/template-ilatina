@@ -5,7 +5,7 @@ Template Name: inicio-plantilla
 ?>
 <?php get_header('home');?> 
     <!--inicio primer bloque--> 
-    <section id="primero" class="d-flex  bgblanco" >
+    <section id="primero" class="d-flex" >
       <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center">
           <div class="foto col-12 col-md-5 align-self-center">
@@ -23,7 +23,7 @@ Template Name: inicio-plantilla
       <!--empieza news-->
     </section>
      <?php if (get_field('news')) : ?>
-    <section id="news" class="d-flex  bgblanco">
+    <section id="news" class="d-flex">
     <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center row-eq-height">
           <div class="col-md-10">
@@ -42,16 +42,16 @@ Template Name: inicio-plantilla
                 <?php the_title();?>
               </h4>
             </div>
-          <?php if ( has_post_thumbnail() ) {
-           the_post_thumbnail('post-thumbnails', array('class' =>'img-fluid card-img-top')); }
-          ?></a>
+            <?php if ( has_post_thumbnail() ) {
+            the_post_thumbnail('post-thumbnails', array('class' =>'img-fluid card-img-top')); }
+            ?>
             <div class="card-block">
               <div class="card-text text-justify">
                 <?php the_excerpt();?>
               </div>
 
             </div>
-            
+            </a>
           </div>
            
         </div>
@@ -95,7 +95,7 @@ Template Name: inicio-plantilla
                     <p><?php the_field( 'txt_collection' ); ?></p>
                   </div>
                   <div class="colecction-link mt-auto w-100">
-                    <a href="<?php the_permalink(); ?>" role="button" class="w-100 black-background white active btn btn-light ml-auto">Leer Más</a>
+                    <a href="<?php the_permalink(); ?>" role="button" class="w-100 active btn btn-light ml-auto">Lire Plus</a>
                   </div>
                 </div>
                 <?php endwhile; endif; ?>
@@ -107,9 +107,8 @@ Template Name: inicio-plantilla
 
     <!--fin segudno bloque-->
     <!--empieza tercer bloque-->
-    <section id="tercero" class="d-flex align-items-center bgblanco">
+    <section id="tercero" class="d-flex align-items-cente">
       <div class="container my-5">
-          
           <div class="row justify-content-center">
           <div class="col-md-10">
             <h2>Nos Livres</h2>
@@ -119,18 +118,18 @@ Template Name: inicio-plantilla
                     $args = array( 'post_type' => 'libros', 'posts_per_page' => 4 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();?>
-                       <div class="col-12 col-md-3 mb-3">
+                       <div class="librohome col-12 col-md-3 mb-3">
+                         <a href="<?php the_permalink(); ?>">
                           <div class="card  h-100">
                             <?php if ( get_field( 'portada_libro') ) { ?>
                                 <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
                               <?php } ?>
                               <div class="card-body">
-                               <a href="<?php the_permalink(); ?>">
                                <h5 class="text-center"><?php the_title(); ?></h5>
-                               </a>
                                <p class="text-center"><?php the_field( 'autor_de_libro' ); ?></p>
                               </div>
                           </div>
+                          </a>
                         </div>
                     <?php endwhile;
                     wp_reset_postdata();?>
@@ -143,14 +142,14 @@ Template Name: inicio-plantilla
 
     <!--fin tercero-->
         <!--cuarto-->
-    <section id="cuarto" class="d-flex align-items-center bgnegroform">
+    <section id="cuarto" class="d-flex align-items-center pb-3 bgnegroform">
       <div class="container my-3">
         <div class="row justify-content-center">
           <div class="col-md-6"></div>
         <div class="col-md-4 justify-content-md-end ">
           <div class="card p-2">
-              <div class="card-block contacto">
-                <h2 class="mb-5">probando uno DOS</h2>
+              <div class="card-block contacto mb.3">
+                <h2 class="mb-3">Contactez Nous</h2>
                 <?php the_field( 'contacto' ); ?>
                 <!--
                   <//?php echo do_shortcode('[contact-form-7 id="50" title="contacto"]'); ?> 
@@ -162,4 +161,6 @@ Template Name: inicio-plantilla
       </div>
     </section>
         <!--fin cuarto-->
+</div><!-- fin main -->
+</div><!-- Fin wrapper -->
 <?php get_footer();?> 

@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-md-7 col-12 align-self-center">
                     <h3 class="textofondoblanco"><?php the_field( 'nombre_de_autor' ); ?></h3>
-                    <p class="textofondoblanco text-justify">L<?php the_field( 'bio_del_autor' ); ?>
+                    <p class="textofondoblanco text-justify"><?php the_field( 'bio_del_autor' ); ?>
                     </p>
                 </div>
             </div>
@@ -86,4 +86,6 @@
     <!--fin tercero-->
 
     <!--fin cuarto-->
+</div><!-- fin main -->
+</div><!-- Fin wrapper --> 
 <?php get_footer();?> 
