@@ -21,12 +21,12 @@ html, body{
 }
 #main{
   overflow: auto;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 }
 .footer{
    position: relative;
-   height: 100px;
-   margin-top: -100px;
+   height: 60px;
+   margin-top: -60px;
    clear: both;
 }
 @media screen and (min-width: 1900px) {
@@ -165,17 +165,28 @@ background-color: rgba(0, 0, 0, 0.2);
 .cabecera, #primero, #segundo, #tercero, #cuarto, #seccion-a, #seccion-b, #seccion-c, #seccion-d{
   height:auto;
 }
+.archivo{
+  min-height: 600px;
+}
  .rescalaimg{
   width:50%;   
   }
 @media (min-width: 768px) {
-   #primero, #segundo, #tercero, #cuarto{
+   #primero, #segundo, #tercero, #cuarto, .archivo{
     min-height:100vh;
   }
   .rescalaimg{
   width:100%;   
   }
-  
+  #main{
+  overflow: auto;
+  padding-bottom: 100px;
+  }
+  .footer{
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+  }
 }
 #post{
   min-height: 440px;

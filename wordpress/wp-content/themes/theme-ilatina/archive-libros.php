@@ -10,7 +10,7 @@
                     while ( $loop->have_posts() ) : $loop->the_post();?>
                        <div class="librohome col-6 col-md-3">
                          <a href="<?php the_permalink(); ?>">
-                          <div class="card">
+                          <div class="card h-100 my-1">
                           <?php if ( get_field( 'portada_libro') ) { ?>
                             <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
                           <?php } ?>
@@ -31,4 +31,6 @@
           </div>
       </div>
     </section>
+  </div><!-- fin main -->
+</div><!-- Fin wrapper -->
    <?php get_footer();?> 

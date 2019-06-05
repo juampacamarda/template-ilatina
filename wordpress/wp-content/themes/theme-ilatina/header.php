@@ -13,7 +13,9 @@
     <title> ilatina </title>
   </head>
   <body>
-    <div class="cabecera home bgblanco">
+  <div id="wrapper" class="bgblanco">
+  <div id="main">
+    <header class="cabecera home">
       <nav class="navbar navbar-expand-lg navbar-light">
                         <?php
                             // Display the Custom Logo
@@ -41,5 +43,5 @@
                 ) ); ?>
                 <!--menu dinamico-->
       </nav>
-     </div>
+   </header>
     <!--fin cabecera-->

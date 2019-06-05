@@ -1,9 +1,9 @@
 <?php get_header();?> 
 
-<section id="tercero" class="d-flex  bgblanco">
+<section class="archivo d-flex  bgblanco">
       <div class="container my-5">
         <h2 class="textofondoblanco">Collections</h2>
-          <div  class="row justify-content-center">
+          <div  class="row justify-content-center my-5">
                     <?php
                     $args = array( 'post_type' => 'collection' );
                     $loop = new WP_Query( $args );
@@ -38,4 +38,6 @@
           </div>
       </div>
     </section>
+</div><!-- fin main -->
+</div><!-- Fin wrapper -->
    <?php get_footer();?> 
