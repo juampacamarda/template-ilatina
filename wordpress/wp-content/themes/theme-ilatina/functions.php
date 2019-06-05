@@ -160,6 +160,7 @@ function libros_post_type() {
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
+		
 	);
 	register_post_type( 'libros', $args );
 
