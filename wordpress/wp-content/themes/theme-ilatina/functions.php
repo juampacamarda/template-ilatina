@@ -56,7 +56,13 @@ function bootstrap_js() {
   					true); 
 }
 add_action( 'wp_enqueue_scripts', 'bootstrap_js');
-
+function fontawesome_js() {
+	wp_enqueue_script( 'fontawesome_js', 
+  					'https://kit.fontawesome.com/ef7428ba99.js', 
+  					array(), 
+  					true);
+}
+add_action( 'wp_enqueue_scripts', 'fontawesome_js');
 //mostrar barra admin
 if (is_user_logged_in()) {
     show_admin_bar(true);

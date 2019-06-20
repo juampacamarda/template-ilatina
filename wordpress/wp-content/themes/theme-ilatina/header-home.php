@@ -18,6 +18,7 @@
         
     
     </script>
+    <link rel="stylesheet" href="print-style.css" type="text/css" media="print" />
 
     <title><?php the_title(); ?> - ilatina </title>
   </head>

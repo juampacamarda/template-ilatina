@@ -13,10 +13,11 @@
                 ?>
             </div>
             <!-- Grid column -->
-            <div class=" col-3 col-md-2 text-light pt-3 pt-md-4">
+            <div class="social pr-1 col-3 col-md-2 text-light pt-3 pt-md-4">
               <div class="d-flex justify-content-center justify-md-content-end">
-                <a href="#" class=" py-1 px-2  mr-2 mr-md-4 socialicon fa fa-facebook"></a>
-                <a href="#" class=" py-1 px-2 socialicon fa fa-twitter"></a>
+                <a href="https://www.facebook.com/editions.ilatina" class="rounded py-1 px-1  mr-1 mr-md-2 socialicon fab fa-facebook"></a>
+                <a href="https://www.messenger.com/t/editions.ilatina" class="rounded py-1 px-1  mr-1 mr-md-2 socialicon fab fa-facebook-messenger"></a>
+                <a href="https://www.instagram.com/editions.ilatina/" class="rounded py-1 px-1 socialicon mr-1 fab fa-instagram"></a>
               </div>
             </div>
             <!-- Grid column -->

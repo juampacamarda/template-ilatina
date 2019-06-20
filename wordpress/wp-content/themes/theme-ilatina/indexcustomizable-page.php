@@ -135,8 +135,13 @@ Template Name: inicio-plantilla
                     wp_reset_postdata();?>
                       <!-- escondo para probar<div class="col-12 col-sm-6 col-md-5 mb-3">
                       </div> -->
-           
           </div>
+          <!-- boton para habilitar cdo tengas más de 4 libros
+          <div class="row justify-content-center">
+             <div>
+                <a href="http://ilatina.fr/livres/" role="button" class="w-100 active btn btn-light ml-auto">Catalogue Complet</a>                      
+              </div>
+           </div> -->
       </div>
     </section>
 

@@ -8,7 +8,7 @@
                     $args = array( 'post_type' => 'libros' );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();?>
-                       <div class="librohome col-6 col-md-3">
+                       <div class="librohome col-8 col-md-3 my-auto mb-3">
                          <a href="<?php the_permalink(); ?>">
                           <div class="card h-100 my-1">
                           <?php if ( get_field( 'portada_libro') ) { ?>

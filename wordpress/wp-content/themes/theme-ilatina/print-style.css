@@ -9,6 +9,8 @@ Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-rea
 */
 
 
+
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
 
 html, body{
@@ -79,15 +81,11 @@ background-attachment: fixed;
 .menubg a{
   color: white;
 }
-.menubg a:hover{
-  color: darkgray;
-}
+
 .link a{
   color:black!important;
 }
-.link a:hover{
-  color: darkgray;
-}
+
 .autores-coleccion h4{
   font-size: 24px;
 }
@@ -98,10 +96,7 @@ background-attachment: fixed;
   color: white;
   font-weight: 500;
 }
-.barra a:hover{
-  text-decoration: none;
-  font-weight: 600;
-}
+
 .barra hr{
   margin-top: 0,5rem;
   margin-bottom: 1rem;
@@ -111,10 +106,7 @@ background-attachment: fixed;
 #news a{
   color: black;
 }
-#news a:hover{
-  color:darkgray;
-  text-decoration: none;
-}
+
 /*hover fotos autores*/
 .autores-coleccion a, .autores a{
   position: relative;
@@ -129,16 +121,7 @@ background-attachment: fixed;
   text-shadow: 3px 5px 7px rgba(0,0,0,0.79);
   display:none;
 }
-.autores-coleccion a:hover, .autores a:hover{
-  border-radius:50%;
-  background: rgb(0, 0, 0);
-}
-.autores-coleccion a:hover span, .autores a:hover span {
-  display:block;
-}
-.autores-coleccion a:hover img, .autores a:hover img{
-  opacity: 0.7;
-}
+
 /*fin hover fotos autores*/
 .bgblanco{
 background-image: url("img/bgwhite.png");
@@ -195,13 +178,7 @@ background-color: rgba(0, 0, 0, 0.2);
 .librohome a{
 color: black;
 }
-.librohome a:hover {
-  color: darkgrey;
-  text-decoration: none;
-}
-.librohome a:hover img{
-  opacity: 0.7;
-}
+
 /*#primero h2, #segundo h2, #tercero h2{
   margin-bottom: 2rem;
   margin-top: 0,5rem; }*/
@@ -213,10 +190,6 @@ color: black;
    background: white;
    color: #000000;
  }
-.social a:hover{
-  color: darkgray;
-  text-decoration: none;
-}
 /*details libros*/
 .details{
   font-size: 12px;

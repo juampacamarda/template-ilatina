@@ -9,7 +9,10 @@
                     <div class="col-12 col-md-10 col-lg-4">
                         <?php if ( get_field( 'foto_de_autor') ) { ?>
 							<img class="img-fluid rounded-circle" src="<?php the_field( 'foto_de_autor' ); ?>" />
-						<?php } ?>
+                        <?php } ?>
+                        <p class="details text-center ml-auto textofondoblanco">
+                          <?php the_field( 'foto_credits' ); ?>
+                       </p>
                     </div>
                     <div class="col-12 col-md-10 col-lg-6 align-self-center">
                         <p class="text-justify textofondoblanco">
