@@ -4,39 +4,22 @@ Template Name: inicio-plantilla
 */
 ?>
 <?php get_header('home');?> 
-    <!--inicio primer bloque--> 
-    <section id="primero" class="d-flex" >
-      <div class="container d-flex align-items-center my-5">
-        <div class="row justify-content-center">
-          <div class="foto col-12 col-md-5 align-self-center">
-            <?php if ( get_field( 'imagen_primer_bloque') ) { ?>
-	        <img class="mx-auto d-block rescalaimg img-fluid" src="<?php the_field( 'imagen_primer_bloque' ); ?>"/>
-            <?php } ?>
-          </div>
-          <div class="col-12 col-md-5 align-self-center cajadetexto">
-            <h2 class="text-center textofondoblanco"><?php the_field( 'titulo_bloque_1' ); ?></h2>
-            <p class="text-justify textofondoblanco"><?php the_field( 'texto_primero' ); ?></p>
-          </div>
-        </div>
-      </div>
-    <!--fin primer bloque-->
-      <!--empieza news-->
-    </section>
+<!--empieza news-->
      <?php if (get_field('news')) : ?>
-    <section id="news" class="d-flex">
+    <section id="news" class="d-flex bgnegro">
     <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center row-eq-height">
           <div class="col-md-10">
               <h2><?php the_field( 'news' ); ?></h2>
           </div>
         <?php
-        $entradas = new WP_Query( 'posts_per_page=4' ); 
+        $entradas = new WP_Query( 'posts_per_page=3' ); 
         // The Loop
         while ( $entradas->have_posts() ) : 
         $entradas->the_post(); ?>
-        <div class="col-md-3 h-100">
+        <div class="col-md-4 h-100">
           <a href="<?php the_permalink() ?>">
-          <div class="card p-1">
+          <div class="card p-1 bgblanco">
             <div class="card-tittle pt-2 text-center">
               <h4>
                 <?php the_title();?>
@@ -66,6 +49,23 @@ Template Name: inicio-plantilla
     </section>
       <?php endif ?>
     <!--fin news-->
+    <!--inicio primer bloque--> 
+    <section id="primero" class="d-flex" >
+      <div class="container d-flex align-items-center my-5">
+        <div class="row justify-content-center">
+          <div class="foto col-12 col-md-5 align-self-center">
+            <?php if ( get_field( 'imagen_primer_bloque') ) { ?>
+	        <img class="mx-auto d-block rescalaimg img-fluid" src="<?php the_field( 'imagen_primer_bloque' ); ?>"/>
+            <?php } ?>
+          </div>
+          <div class="col-12 col-md-5 align-self-center cajadetexto">
+            <h2 class="text-center textofondoblanco"><?php the_field( 'titulo_bloque_1' ); ?></h2>
+            <p class="text-justify textofondoblanco"><?php the_field( 'texto_primero' ); ?></p>
+          </div>
+        </div>
+      </div>
+    <!--fin primer bloque-->  
+    </section>
 
     <!--segundo bloque-->
     <section id="segundo" class="d-flex align-items-center bgnegro">
@@ -78,6 +78,7 @@ Template Name: inicio-plantilla
                 <?php
                 $args = array(
                 'post_type' => 'collection',
+                'posts_per_page' => 2 
                 );
                 query_posts($args); ?>
                 <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>

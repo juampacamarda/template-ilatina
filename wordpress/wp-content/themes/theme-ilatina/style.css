@@ -95,11 +95,12 @@ background-attachment: fixed;
   font-size: 24px;
 }
 .barra a{
-  color: white;
+  color: white!important;
+  text-decoration: none!important;
   font-weight: 500;
 }
 .barra a:hover{
-  text-decoration: none;
+  text-decoration: none!important;
   font-weight: 600;
 }
 .barra hr{
@@ -222,6 +223,11 @@ color: black;
   font-size: 12px;
  
 }
+/*comprar boton*/
+.shoptitle{margin-bottom: 0!important;}
+
+/* post links*/
+#post a{color: #343a40; text-decoration: underline;}
 
 /*slider bg*/
 .wpcf7-form input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], select, textarea {width:100% !important;}

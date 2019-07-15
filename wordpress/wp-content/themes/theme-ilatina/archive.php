@@ -7,7 +7,7 @@ get_header(); ?>
     <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center row-eq-height">
           <div class="col-md-10">
-              <h2>probando</h2>
+              <h2>Nouveautés</h2>
           </div>
          <?php
             $entradas = new WP_Query( 'posts_per_page=5' ); 
@@ -48,4 +48,6 @@ get_header(); ?>
 
     </div>  
     </section>
+</div><!-- fin main -->
+</div><!-- Fin wrapper -->
 <?php get_footer(); ?>
