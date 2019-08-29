@@ -10,21 +10,9 @@
                         <?php if ( get_field( 'portada_libro') ) { ?>
                             <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
                         <?php } ?>
-                       <p class="details shoptitle ml-auto textofondoblanco">
+                       <p class="details ml-auto textofondoblanco">
                            <?php the_field( 'ficha_tecnica' ); ?>
                        </p>
-                       <?php if (get_field('boton_de_compra1')) : ?>
-                       <div class="colecction-link w-100">
-                        <p class="textofondoblanco shoptitle"><strong>Acheter</strong></p>
-                        <a href="<?php the_field( 'boton_de_compra1' ); ?>" role="button" class="active btn btn-danger ml-auto"><?php the_field( 'texto_de_compra1' ); ?></a>
-                        <?php if (get_field('boton_de_compra2')) : ?>
-                        <a href="<?php the_field( 'boton_de_compra2' ); ?>" role="button" class="active btn btn-success ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
-                        <?php endif?> 
-                        <?php if (get_field('boton_de_compra3')) : ?>
-                        <a href="<?php the_field( 'boton_de_compra3' ); ?>" role="button" class="active btn btn-primary ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
-                        <?php endif?> 
-                      </div>
-                      <?php endif?>   
                     </div>
                     <div class="col-12 col-md-10 col-lg-6">
                         
@@ -60,7 +48,7 @@
                 </div>
                 <div class="col-md-7 col-12 align-self-center">
                     <h3 class="textofondoblanco"><?php the_field( 'nombre_de_autor' ); ?></h3>
-                    <p class="textofondoblanco text-justify"><?php the_field( 'bio_del_autor' ); ?>
+                    <p class="textofondoblanco text-justify">L<?php the_field( 'bio_del_autor' ); ?>
                     </p>
                 </div>
             </div>
@@ -98,6 +86,4 @@
     <!--fin tercero-->
 
     <!--fin cuarto-->
-</div><!-- fin main -->
-</div><!-- Fin wrapper --> 
 <?php get_footer();?> 
