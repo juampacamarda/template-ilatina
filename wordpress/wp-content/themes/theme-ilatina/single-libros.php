@@ -14,11 +14,11 @@
                            <?php the_field( 'ficha_tecnica' ); ?>
                        </p>
                        <?php if (get_field('boton_de_compra1')) : ?>
-                       <div class="colecction-link w-100">
+                       <div class="w-100">
                         <p class="textofondoblanco shoptitle"><strong>Acheter</strong></p>
                         <a href="<?php the_field( 'boton_de_compra1' ); ?>" role="button" class="active btn btn-danger ml-auto"><?php the_field( 'texto_de_compra1' ); ?></a>
                         <?php if (get_field('boton_de_compra2')) : ?>
-                        <a href="<?php the_field( 'boton_de_compra2' ); ?>" role="button" class="active btn btn-success ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
+                        <a href="<?php the_field( 'boton_de_compra2' ); ?>" role="button" class="active btn btn-warning ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
                         <?php endif?> 
                         <?php if (get_field('boton_de_compra3')) : ?>
                         <a href="<?php the_field( 'boton_de_compra3' ); ?>" role="button" class="active btn btn-primary ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
