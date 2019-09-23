@@ -4,29 +4,26 @@
       <div class="container my-5">
         <h2 class="textofondoblanco">Nos livres</h2>
           <div class="row justify-content-center">
+                    <!--empieza el loop que trae los libros-->
                     <?php
-                    $args = array( 'post_type' => 'libros' );
+                    $args = array( 'post_type' => 'libros', 'posts_per_page' => 4 );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();?>
-                       <div class="librohome col-8 col-md-3 my-auto mb-3">
+                       <div class="librohome col-12 col-md-3 mb-3">
                          <a href="<?php the_permalink(); ?>">
-                          <div class="card h-100 my-1">
-                          <?php if ( get_field( 'portada_libro') ) { ?>
-                            <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
-                          <?php } ?>
+                          <div class="card  h-100">
+                            <?php if ( get_field( 'portada_libro') ) { ?>
+                                <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
+                              <?php } ?>
                               <div class="card-body">
-                               
-                               <h4 class="card-title text-center"><?php the_title(); ?></h4>
-                               
-                               <p class="card-text text-center"><?php the_field( 'autor_de_libro' ); ?></p>
+                               <h5 class="text-center"><?php the_title(); ?></h5>
+                               <p class="text-center"><?php the_field( 'autor_de_libro' ); ?></p>
                               </div>
                           </div>
                           </a>
                         </div>
                     <?php endwhile;
                     wp_reset_postdata();?>
-                      <!-- escondo para probar<div class="col-12 col-sm-6 col-md-5 mb-3">
-                      </div> -->
            
           </div>
       </div>

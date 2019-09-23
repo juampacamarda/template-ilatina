@@ -108,7 +108,7 @@ Template Name: inicio-plantilla
 
     <!--fin segudno bloque-->
     <!--empieza tercer bloque-->
-    <section id="tercero" class="d-flex align-items-cente">
+    <section id="tercero" class="d-flex align-items-center">
       <div class="container my-5">
           <div class="row justify-content-center">
           <div class="col-md-10">
