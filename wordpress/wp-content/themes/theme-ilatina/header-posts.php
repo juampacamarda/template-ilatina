@@ -45,7 +45,7 @@
                  'container' =>'div',
                  'container_class' => 'collapse textofondoblanco navbar-collapse',
                  'container_id' => 'navbarSupportedContent',
-                 'items_wrap' => '<ul class="navbar-nav ml-auto typo">%3$s</ul>',
+                 'items_wrap' => '<ul class="navbar-nav ml-auto pt-5 typo">%3$s</ul>',
                  'menu_class' => 'nav-item'
                 ) ); ?>
                 <!--menu dinamico-->

@@ -26,7 +26,7 @@
     <div id="wrapper" class="bgblanco">
     <div id="main">
         <section class="cabecera">
-                <nav class="navbar navbar-expand-lg navbar-light">
+                <nav class="navbar navbar-expand-lg navbar-light bgblanco fixed-top">
                             <?php
                                 // Display the Custom Logo
                                 the_custom_logo();
@@ -46,14 +46,14 @@
                     <?php wp_nav_menu(array(
                     'theme_location' => 'superior',
                     'container' =>'div',
-                    'container_class' => 'collapse navbar-collapse p-3',
+                    'container_class' => 'collapse navbar-collapse',
                     'container_id' => 'navbarSupportedContent',
-                    'items_wrap' => '<ul class="navbar-nav ml-auto textofondoblanco typo">%3$s</ul>',
+                    'items_wrap' => '<ul class="navbar-nav ml-auto pt-5 textofondoblanco typo">%3$s</ul>',
                     'menu_class' => 'nav-item'
                     ) ); ?>
                     <!--menu dinamico-->
                 </nav>
-                <div class="home bghome">
+                <div class="home margen-postnav bghome">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -61,11 +61,27 @@
                                 <img src="<?php the_field( 'imagen01' ); ?>" alt="First slide" class="img-fluid d-block w-100" />
                             <?php } ?>
                             </div>
-                            <div class="carousel-item">
-                            <?php if ( get_field( 'imagen02') ) { ?>
-                                <img src="<?php the_field( 'imagen02' ); ?>" alt="Second slide" class="img-fluid d-block w-100" />
-                            <?php } ?>
-                            </div>
+                            <!--fin repeater-->
+                            <?php
+                            // check if the repeater field has rows of data
+                            if( have_rows('slide_imagen') ):?>
+
+                                <?php while( have_rows('slide_imagen') ): the_row(); 
+                                // vars
+                                $image = get_sub_field('imagen_slider');
+                                ?>
+
+                                <div class="carousel-item">
+                                    <img src="<?php echo $image['url']; ?>" class="img-fluid d-block w-100" />
+                                </div>
+
+                                <?php endwhile;
+
+                            else :
+
+                                // no rows found
+
+                            endif;?>
                         </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

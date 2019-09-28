@@ -164,6 +164,9 @@ background-color: rgba(0, 0, 0, 0.2);
 .cabecera, #primero, #segundo, #tercero, #cuarto, #seccion-a, #seccion-b, #seccion-c, #seccion-d{
   height:auto;
 }
+.margen-postnav{
+  margin-top: 125px!important;
+}
 .archivo{
   min-height: 600px;
 }
@@ -232,7 +235,13 @@ color: black;
 .btn-warning {
 	color: white !important;
 }
-/*slider bg*/
+.df-container > .df-ui-next, .df-container > .df-ui-prev{
+  color: white!important;
+}
+/*slider bg
+.carousel-inner {
+    height: 400px!important;}*/
+
 .wpcf7-form input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], select, textarea {width:100% !important;}
 /* Print Style Sheet */
 @media print {

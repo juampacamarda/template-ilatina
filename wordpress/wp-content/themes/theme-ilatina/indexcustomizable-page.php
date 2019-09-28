@@ -5,7 +5,7 @@ Template Name: inicio-plantilla
 ?>
 <?php get_header('home');?> 
 <!--empieza news-->
-     <?php if (get_field('news')) : ?>
+  <?php if (get_field('news')) : ?>
     <section id="news" class="d-flex bgnegro">
     <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center row-eq-height">
@@ -17,9 +17,9 @@ Template Name: inicio-plantilla
         // The Loop
         while ( $entradas->have_posts() ) : 
         $entradas->the_post(); ?>
-        <div class="col-md-4 h-100">
+        <div class="col-md-4">
           <a href="<?php the_permalink() ?>">
-          <div class="card p-1 bgblanco">
+          <div class="card h-100 py-2 px-4 bgblanco">
             <div class="card-tittle pt-2 text-center">
               <h4>
                 <?php the_title();?>
@@ -50,7 +50,7 @@ Template Name: inicio-plantilla
       <?php endif ?>
     <!--fin news-->
     <!--inicio primer bloque--> 
-    <section id="primero" class="d-flex" >
+<section id="primero" class="d-flex" >
       <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center">
           <div class="foto col-12 col-md-5 align-self-center">
