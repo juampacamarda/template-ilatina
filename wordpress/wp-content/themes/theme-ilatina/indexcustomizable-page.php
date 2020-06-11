@@ -112,7 +112,7 @@ Template Name: inicio-plantilla
       <div class="container my-5">
           <div class="row justify-content-center">
           <div class="col-md-10">
-            <h2>Nos Livres</h2>
+            <h2>Nos Derniers Livres</h2>
           </div>
           <!--empieza el loop que trae los libros-->
                     <?php
@@ -137,12 +137,12 @@ Template Name: inicio-plantilla
                       <!-- escondo para probar<div class="col-12 col-sm-6 col-md-5 mb-3">
                       </div> -->
           </div>
-          <!-- boton para habilitar cdo tengas más de 4 libros
+          <!-- boton para habilitar cdo tengas más de 4 libros-->
           <div class="row justify-content-center">
              <div>
-                <a href="http://ilatina.fr/livres/" role="button" class="w-100 active btn btn-light ml-auto">Catalogue Complet</a>                      
+                <a href="http://ilatina.fr/livres/" role="button" class="w-100 active btn ml-auto">Catalogue Complet</a>                      
               </div>
-           </div> -->
+           </div> 
       </div>
     </section>
 

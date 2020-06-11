@@ -21,7 +21,7 @@
                         <a href="<?php the_field( 'boton_de_compra2' ); ?>" role="button" class="active btn btn-warning ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
                         <?php endif?> 
                         <?php if (get_field('boton_de_compra3')) : ?>
-                        <a href="<?php the_field( 'boton_de_compra3' ); ?>" role="button" class="active btn btn-primary ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
+                        <a href="<?php the_field( 'boton_de_compra3' ); ?>" role="button" class="active btn btn-primary ml-auto"><?php the_field( 'texto_de_compra3' ); ?></a>
                         <?php endif?> 
                       </div>
                       <?php endif?>   

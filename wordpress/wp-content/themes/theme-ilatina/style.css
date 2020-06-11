@@ -253,3 +253,11 @@ section { display:block; }
 .bgnegro{background-image: url("img/bgblack.png");background-repeat: repeat;background-color: white;color: white;background-attachment: fixed;}
 }
 /* Print Style Sheet */
+#tercero .btn {
+    background: #1c1c1c!important;
+    color: #fff!important;
+}
+#tercero .btn:hover {
+    background: #fff!important;
+    color: #1c1c1c!important;
+}
