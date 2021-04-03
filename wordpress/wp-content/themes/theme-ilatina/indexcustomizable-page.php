@@ -47,10 +47,10 @@ Template Name: inicio-plantilla
       </div>  
     
     </section>
-      <?php endif ?>
+  <?php endif ?>
     <!--fin news-->
     <!--inicio primer bloque--> 
-<section id="primero" class="d-flex" >
+    <section id="primero" class="d-flex" >
       <div class="container d-flex align-items-center my-5">
         <div class="row justify-content-center">
           <div class="foto col-12 col-md-5 align-self-center">
@@ -64,7 +64,7 @@ Template Name: inicio-plantilla
           </div>
         </div>
       </div>
-    <!--fin primer bloque-->  
+      <!--fin primer bloque-->  
     </section>
 
     <!--segundo bloque-->

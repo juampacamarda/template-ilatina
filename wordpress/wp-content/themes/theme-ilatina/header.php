@@ -11,7 +11,8 @@
     <?php wp_head();?>
     <link rel="stylesheet" href="print-style.css" type="text/css" media="print" />
     <title> ilatina </title>
-
+    <?php wp_head(); ?>
+    
   </head>
   <body>
   <div id="wrapper" class="bgblanco">

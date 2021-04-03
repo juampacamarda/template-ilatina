@@ -4,7 +4,8 @@
       <div class="container my-5">
         <h2 class="textofondoblanco">Nos Auteurs</h2>
           <div class="row justify-content-center">
-                    <?php
+            hola
+                    <?php 
                     $args = array( 'post_type' => 'auteur' );
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();?>

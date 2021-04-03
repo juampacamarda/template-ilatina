@@ -27,7 +27,8 @@
                 <?php endwhile;?>
                 
           </div>
-          <?php wpbeginner_numeric_posts_nav(); ?>
+          <?php  get_previous_posts_link();; ?>
+          <?php  get_next_posts_link();; ?>
       </div>
     </section>
   </div><!-- fin main -->

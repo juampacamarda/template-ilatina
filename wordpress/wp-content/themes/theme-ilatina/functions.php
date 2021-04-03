@@ -315,7 +315,11 @@ add_action( 'init', 'collection_post_type', 0 );
 
 }
 
-
+function your_themes_pagination(){
+    global $wp_query; 
+    echo paginate_links();
+}
+/*
 function wpbeginner_numeric_posts_nav() {
  
     if( is_singular() )
@@ -323,18 +327,15 @@ function wpbeginner_numeric_posts_nav() {
  
     global $wp_query;
  
-    /** Stop execution if there's only 1 page */
     if( $wp_query->max_num_pages <= 1 )
         return;
  
     $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
     $max   = intval( $wp_query->max_num_pages );
  
-    /** Add current page to the array */
     if ( $paged >= 1 )
         $links[] = $paged;
  
-    /** Add the pages around the current page to the array */
     if ( $paged >= 3 ) {
         $links[] = $paged - 1;
         $links[] = $paged - 2;
@@ -347,11 +348,7 @@ function wpbeginner_numeric_posts_nav() {
  
     echo '<div class="navigation d-flex justify-content-center"><ul class="nav">' . "\n";
  
-    /** Previous Post Link 
-    if ( get_previous_posts_link() )
-        printf( '<li class="mx-2">%s</li>' . "\n", get_previous_posts_link('holi') );*/
- 
-    /** Link to first page, plus ellipses if necessary */
+    
     if ( ! in_array( 1, $links ) ) {
         $class = 1 == $paged ? ' class=" mx-2 active"' : '';
  
@@ -361,14 +358,12 @@ function wpbeginner_numeric_posts_nav() {
             echo '<li class="mx-2">…</li>';
     }
  
-    /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
+   
     foreach ( (array) $links as $link ) {
         $class = $paged == $link ? ' class="active mx-2"' : '';
         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
     }
- 
-    /** Link to last page, plus ellipses if necessary */
+
     if ( ! in_array( $max, $links ) ) {
         if ( ! in_array( $max - 1, $links ) )
             echo '<li class="mx-2">…</li>' . "\n";
@@ -377,12 +372,10 @@ function wpbeginner_numeric_posts_nav() {
         printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
     }
  
-    /** Next Post Link 
-    if ( get_next_posts_link() )
-        printf( '<li class="mx-2">%s</li>' . "\n", get_next_posts_link() );*/
+
  
     echo '</ul></div>' . "\n";
  
-}
+}*/
   //abajo termina el php
 ?>

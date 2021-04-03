@@ -14,6 +14,7 @@
 
 
     <title><?php the_title(); ?> - ilatina </title>
+    <?php wp_head(); ?>
 </head>
 
 <body>
