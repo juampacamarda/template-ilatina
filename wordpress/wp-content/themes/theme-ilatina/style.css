@@ -287,3 +287,67 @@ div#pagination-menu .nav {
 div#pagination-menu {
     margin-top: 30px;
 }
+/*prensa libros*/
+section#prensa {
+    padding: 50px 0;
+}
+
+.nota {
+    padding: 20px 15px;
+    background-color: rgba( 255,255,255, .8);
+    border-bottom: 1px solid #ced4da;
+    
+    box-shadow: 0px 1px 2px #ced4da;
+}
+
+.nota p.txt-prensa {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #343a40;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.nota h4.medio-prensa a {
+    color: #32373c;
+    text-align: right;
+    display: block;
+    transition:all ease .4s
+}
+.nota h4.medio-prensa a:hover {
+    color: #343a40;
+    
+}
+
+.nota h4.medio-prensa {
+    margin: 0px!important;
+}
+
+/*modal portada  */
+.click-portada{
+  cursor: pointer;
+}
+.modal-body p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/**/
+div#newsletter {
+    padding-top: 40px;
+    border-top: solid 1px;
+    border-radius: 0px;
+}
+
+#newsletter label {
+    width: 100%;
+    display: block;
+}
+#newsletter .btn {
+    background: #1c1c1c!important;
+    color: #fff!important;
+    float:right;
+    clear:both
+}

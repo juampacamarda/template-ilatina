@@ -72,7 +72,7 @@ wordpress/wp-content/themes/index.php
 wordpress/wp-content/themes/twentynineteen/
 wordpress/wp-content/themes/twentyseventeen/
 wordpress/wp-content/themes/twentysixteen/
-!wordpress/wp-content/themes/theme-ilatina/inc/*
+!wordpress/wp-content/themes/theme-ilatina/inc/slide.php
 /.htaccess
 /license.txt
 /readme.html
