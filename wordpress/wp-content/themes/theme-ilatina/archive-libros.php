@@ -5,30 +5,25 @@
         <h2 class="textofondoblanco">Nos livres</h2>
           <div class="row justify-content-center">
             <!--empieza el loop que trae los libros-->
-            <?php
-              // Start the Loop.
-              while ( have_posts() ) :
-                the_post();?>
-                    <!--LOOP LIVRES-->
-                      <div class="librohome col-12 col-md-3 mb-3">
-                        <a href="<?php the_permalink(); ?>">
-                            <div class="card  h-100">
-                              <?php if ( get_field( 'portada_libro') ) { ?>
-                                  <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
-                                <?php } ?>
-                                <div class="card-body">
-                                  <h5 class="text-center"><?php the_title(); ?></h5>
-                                  <p class="text-center"><?php the_field( 'autor_de_libro' ); ?></p>
-                                </div>
-                            </div>
-                          </a>
+            <?php /* Start the Loop.*/ while ( have_posts() ) : the_post();?>
+              <!--LOOP LIVRES-->
+              <div class="librohome col-12 col-md-3 mb-3">
+                <a href="<?php the_permalink(); ?>">
+                  <div class="card  h-100">
+                    <?php if ( get_field( 'portada_libro') ) { ?>
+                        <img src="<?php the_field( 'portada_libro' ); ?>" alt="Livre" class="card-img-top img-fluid" alt="imagen" />
+                      <?php } ?>
+                      <div class="card-body">
+                        <h5 class="text-center"><?php the_title(); ?></h5>
+                        <p class="text-center"><?php the_field( 'autor_de_libro' ); ?></p>
                       </div>
-                
-                <?php endwhile;?>
-                
+                  </div>
+                </a>
+              </div>
+            <?php endwhile;?>
+
           </div>
-          <?php  get_previous_posts_link();; ?>
-          <?php  get_next_posts_link();; ?>
+          <?php wpbeginner_numeric_posts_nav(); ?>
       </div>
     </section>
   </div><!-- fin main -->

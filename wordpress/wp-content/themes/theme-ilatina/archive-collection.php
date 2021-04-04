@@ -4,10 +4,7 @@
       <div class="container my-5">
         <h2 class="textofondoblanco">Collections</h2>
           <div  class="row justify-content-center my-5">
-                    <?php
-                    $args = array( 'post_type' => 'collection' );
-                    $loop = new WP_Query( $args );
-                    while ( $loop->have_posts() ) : $loop->the_post();?>
+                    <?php /* Start the Loop.*/ while ( have_posts() ) : the_post();?>
                        <div class="col-12">
                           <div class="row row-eq-height mb-3 pb-3">
                               <div class="col-md-5">
@@ -30,12 +27,13 @@
                               </div>
                           </div>
                         </div>
-                    <?php endwhile;
-                    wp_reset_postdata();?>
+                    <?php endwhile;?>
+
                       <!-- escondo para probar<div class="col-12 col-sm-6 col-md-5 mb-3">
                       </div> -->
            
           </div>
+          <?php wpbeginner_numeric_posts_nav(); ?>
       </div>
     </section>
 </div><!-- fin main -->
