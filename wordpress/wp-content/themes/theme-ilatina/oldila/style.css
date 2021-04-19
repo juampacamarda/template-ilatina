@@ -1,0 +1,263 @@
+/*
+Theme Name: JPC-theme
+Theme URI: http://jpcamardaportfolio.com.ar
+Author: Juan Pablo Camarda
+Description: Plantilla responsive creada en Boostrap 4
+License: GNU General Public License v2 or later
+Text Domain: JPC-Theme
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+html, body{
+  height: 100%;
+}
+#wrapper{
+  min-height: 100%;
+}
+#main{
+  overflow: auto;
+  padding-bottom: 60px;
+}
+.footer{
+   position: relative;
+   height: 60px;
+   margin-top: -60px;
+   clear: both;
+}
+@media screen and (min-width: 1900px) {
+  #main{
+  overflow: auto;
+  padding-bottom: 150px;
+}
+.footer{
+   position: relative;
+   height: 150px;
+   margin-top: -150px;
+}
+}
+h3, h2, h1, h4, h5, .typo{
+  font-family: Montserrat;
+  font-weight: 700;
+}
+p{
+  font-family: Montserrat;
+  font-weight: 400;
+}
+/*h2{
+  font-family: ilatina;
+}*/
+
+
+.logosize, .footerlogo{   
+  width: 40%;
+}
+/*.bghome{
+  background-image: url("img/bg01-eva.png");
+  background-attachment: fixed;
+  background-size: cover;
+}*/
+.bgnegro{
+background-image: url("img/bgblack.png");
+background-repeat: repeat;
+background-color: white;
+color: white;
+background-attachment: fixed;
+}
+.bgnegroform{
+background-image: url("img/bgblack.png");
+background-repeat: repeat;
+background-color: white;
+background-attachment: fixed;
+}
+.menubg{
+  background-color: rgba(0, 0, 0, 0.4);
+  color:white;
+}
+.menubg a{
+  color: white;
+}
+.menubg a:hover{
+  color: darkgray;
+}
+.link a{
+  color:black!important;
+}
+.link a:hover{
+  color: darkgray;
+}
+.autores-coleccion h4{
+  font-size: 24px;
+}
+.autores H4{
+  font-size: 24px;
+}
+.barra a{
+  color: white!important;
+  text-decoration: none!important;
+  font-weight: 500;
+}
+.barra a:hover{
+  text-decoration: none!important;
+  font-weight: 600;
+}
+.barra hr{
+  margin-top: 0,5rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgb(255, 252, 252);
+}
+#news a{
+  color: black;
+}
+#news a:hover{
+  color:darkgray;
+  text-decoration: none;
+}
+/*hover fotos autores*/
+.autores-coleccion a, .autores a{
+  position: relative;
+  display:inline-block;
+}
+.autores-coleccion a span, .autores a span{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  color:white;
+  text-shadow: 3px 5px 7px rgba(0,0,0,0.79);
+  display:none;
+}
+.autores-coleccion a:hover, .autores a:hover{
+  border-radius:50%;
+  background: rgb(0, 0, 0);
+}
+.autores-coleccion a:hover span, .autores a:hover span {
+  display:block;
+}
+.autores-coleccion a:hover img, .autores a:hover img{
+  opacity: 0.7;
+}
+/*fin hover fotos autores*/
+.bgblanco{
+background-image: url("img/bgwhite.png");
+background-repeat: repeat;
+background-color: white;
+background-attachment: fixed;
+}
+.textofondoblanco{
+padding: 5px;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+background-color: rgba(255, 255, 255, 0.6);
+}
+.textofondonegro{
+padding: 5px;
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+background-color: rgba(0, 0, 0, 0.2);
+}
+.cabecera, #primero, #segundo, #tercero, #cuarto, #seccion-a, #seccion-b, #seccion-c, #seccion-d{
+  height:auto;
+}
+.margen-postnav{
+  margin-top: 125px!important;
+}
+.archivo{
+  min-height: 600px;
+}
+ .rescalaimg{
+  width:50%;   
+  }
+@media (min-width: 768px) {
+   #primero, #segundo, #tercero, #cuarto, .archivo{
+    min-height:100vh;
+  }
+  .rescalaimg{
+  width:100%;   
+  }
+  #main{
+  overflow: auto;
+  padding-bottom: 100px;
+  }
+  .footer{
+    position: relative;
+    height: 100px;
+    margin-top: -100px;
+  }
+}
+#post{
+  min-height: 440px;
+}
+.textonegro{
+  color: black;
+}
+.librohome a{
+color: black;
+}
+.librohome a:hover {
+  color: darkgrey;
+  text-decoration: none;
+}
+.librohome a:hover img{
+  opacity: 0.7;
+}
+/*#primero h2, #segundo h2, #tercero h2{
+  margin-bottom: 2rem;
+  margin-top: 0,5rem; }*/
+
+#primero .cajadetexto{
+ padding:10px;}
+ 
+.socialicon{
+   background: white;
+   color: #000000;
+ }
+.social a:hover{
+  color: darkgray;
+  text-decoration: none;
+}
+/*details libros*/
+.details{
+  font-size: 12px;
+ 
+}
+/*comprar boton*/
+.shoptitle{margin-bottom: 0!important;}
+
+/* post links*/
+#post a{color: #343a40; text-decoration: underline;}
+/*boton compra*/
+.btn-warning {
+	color: white !important;
+}
+.df-container > .df-ui-next, .df-container > .df-ui-prev{
+  color: white!important;
+}
+/*slider bg
+.carousel-inner {
+    height: 400px!important;}*/
+
+.wpcf7-form input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="number"], input[type="tel"], input[type="range"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="color"], select, textarea {width:100% !important;}
+/* Print Style Sheet */
+@media print {
+body { background:white; color:black; margin:0; }
+header { display:block; }
+section { display:block; }
+#primero, #segundo, #tercero, #cuarto{ display:block; }
+.bgblanco{background-image: url("img/bgwhite.png");background-repeat: repeat;background-color: white;background-attachment: fixed;}
+.bgnegro{background-image: url("img/bgblack.png");background-repeat: repeat;background-color: white;color: white;background-attachment: fixed;}
+}
+/* Print Style Sheet */
+#tercero .btn {
+    background: #1c1c1c!important;
+    color: #fff!important;
+}
+#tercero .btn:hover {
+    background: #fff!important;
+    color: #1c1c1c!important;
+}
