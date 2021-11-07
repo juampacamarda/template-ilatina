@@ -7,10 +7,10 @@ Template Name: inicio-plantilla
 <!--empieza news-->
 	<?php if (get_field('news')) : ?>
 		<section id="news" class="d-flex bgnegro">
-		<div class="container d-flex align-items-center my-5">
+			<div class="container d-flex align-items-center my-5">
 				<div class="row justify-content-center row-eq-height">
 					<div class="col-md-10">
-							<h2><?php the_field( 'news' ); ?></h2>
+							<h2 class="mb-3"><?php the_field( 'news' ); ?></h2>
 					</div>
 				<?php
 				$entradas = new WP_Query( 'posts_per_page=3' ); 
@@ -81,19 +81,19 @@ Template Name: inicio-plantilla
 		<section id="segundo" class="d-flex align-items-center bgnegro">
 			<div  class="container my-5">
 				<div class="row justify-content-center">
-						<div class="col-md-10">
-							<h2>Collections</h2>
+						<div class="col-md-12">
+							<h2 class="mb-3">Collections</h2>
 						</div>
 						<!--loop por categoria -->
 								<?php
 								$args = array(
 								'post_type' => 'collection',
-								'posts_per_page' => 2 
+								'posts_per_page' => 3 
 								);
 								query_posts($args); ?>
 								<?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 								<!-- Stuff happening inside the loop -->
-								<div class="collection-ini col-12 col-md-5 mb-3 d-flex align-items-start flex-column">
+								<div class="collection-ini col-12 col-md-4 mb-3 d-flex align-items-start flex-column">
 									<div class="colection-header">
 										<h3 class="text-center"><?php the_title(); ?></h3>
 									</div><!--fin colheader-->
