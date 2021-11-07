@@ -60,17 +60,19 @@ p{
   background-size: cover;
 }*/
 .bgnegro{
-background-image: url("img/bgblack.png");
-background-repeat: repeat;
-background-color: white;
-color: white;
-background-attachment: fixed;
+
+  background-image: url("img/bgblack.png");
+  background-color: #878787;
+  color: white;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+
 }
 .bgnegroform{
-background-image: url("img/bgblack.png");
-background-repeat: repeat;
-background-color: white;
-background-attachment: fixed;
+  background-image: url("img/bgblack.png");
+  background-repeat: repeat;
+  background-color: white;
+  background-attachment: fixed;
 }
 .menubg{
   background-color: rgba(0, 0, 0, 0.4);
@@ -350,4 +352,56 @@ div#newsletter {
     color: #fff!important;
     float:right;
     clear:both
+}
+
+/**/
+
+.autores img.rounded-circle.img-fluid {
+  filter: grayscale(1);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0!important;
+}
+
+
+.autores a{
+  border-radius:50%!important;
+  overflow: hidden;
+  display: block!important;
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+/*boutique boutons*/
+
+.ilat-boutique a {
+  border-radius: 10px;
+  background: #231f20;
+  color: #fff!important;
+}
+
+/*btn compra en titulo*/
+@media(min-width:992px) {
+
+  .livres-title {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .livres-compra {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .compra-buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
