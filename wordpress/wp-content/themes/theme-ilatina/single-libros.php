@@ -1,9 +1,32 @@
 <?php get_header(posts); ?>
 	<section class="bgblanco d-flex align-items-center">
 			<div class="container my-5">
-				<div class="col-md-10">
-					<h2><?php the_title(); ?></h2>
-					<h4><?php the_field( 'autor_de_libro' ); ?></h4>
+				<div class="col-md-12 livres-title">
+					<div class="livres-title-data">
+
+						<h2>
+							<?php the_title(); ?>
+						</h2>
+						<h4>
+							<?php the_field( 'autor_de_libro' ); ?>
+						</h4>
+
+					</div>
+
+					<div class="livres-compra">
+						<?php if (get_field('texto_de_compra1')) : ?>
+							<div class="compra-buttons">
+								<p class="textofondoblanco shoptitle"><strong>Acheter</strong></p>
+								<a href="<?php the_field( 'boton_de_compra1' ); ?>" role="button" class="active btn btn-danger ml-auto"><?php the_field( 'texto_de_compra1' ); ?></a>
+								<?php if (get_field('texto_de_compra2')) : ?>
+								<a href="<?php the_field( 'boton_de_compra2' ); ?>" role="button" class="active btn btn-warning ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
+								<?php endif?> 
+								<?php if (get_field('texto_de_compra3')) : ?>
+								<a href="<?php the_field( 'boton_de_compra3' ); ?>" role="button" class="active btn btn-primary ml-auto"><?php the_field( 'texto_de_compra3' ); ?></a>
+								<?php endif?> 
+							</div>
+						<?php endif?>
+					</div>
 				</div>
 				<div class="row justify-content-center">
 					<div class="col-12 col-md-10 col-lg-4">
@@ -53,40 +76,63 @@
 						<p class="text-justify textofondoblanco">
 							<?php the_field( 'descripcion_corta' ); ?>
 						</p>
-						<?php if (get_field('texto_de_compra1')) : ?>
-							<div class="w-100">
-								<p class="textofondoblanco shoptitle"><strong>Acheter</strong></p>
-								<a href="<?php the_field( 'boton_de_compra1' ); ?>" role="button" class="active btn btn-danger ml-auto"><?php the_field( 'texto_de_compra1' ); ?></a>
-								<?php if (get_field('texto_de_compra2')) : ?>
-								<a href="<?php the_field( 'boton_de_compra2' ); ?>" role="button" class="active btn btn-warning ml-auto"><?php the_field( 'texto_de_compra2' ); ?></a>
-								<?php endif?> 
-								<?php if (get_field('texto_de_compra3')) : ?>
-								<a href="<?php the_field( 'boton_de_compra3' ); ?>" role="button" class="active btn btn-primary ml-auto"><?php the_field( 'texto_de_compra3' ); ?></a>
-								<?php endif?> 
-							</div>
-						<?php endif?>
 					</div>
 			
 				</div>
 			</div>
-	 </section>
+	</section>
+	<!-- seccion prensa -->
+	<?php if( have_rows('prensa') ): ?>
+		<section id='prensa' class='bgnegro'>
+			<div class="container">
+				<h2 class="mb-4">
+					Presse
+				</h2>
+				<div class="row d-flex justify-content-center">
+						<?php while( have_rows('prensa') ): the_row(); ?>
+							<div class="col-md-6">
+								<a class="nota-presse" href="<?php the_sub_field('link_del_medio'); ?>" target="blank">
+									<p class="txt-prensa">
+										<i class="fa fa-quote-left" aria-hidden="true"></i>
+										<?php the_sub_field('extracto'); ?>
+										<i class="fa fa-quote-right" aria-hidden="true"></i>
+									</p>
+										
+									<h4 class="medio-prensa">
+										<?php the_sub_field('nombre_del_medio'); ?>
+									</h4>
+								</a>
+							</div>
+						<?php endwhile; ?>
+					</div>
+				</div>
+			</div>
+		</section>
+	<?php endif; ?>
 	<!--inicio primer bloque-->
  <?php if (get_field('titulo_preview')) : ?>
-	<section id="seccion-a" class="bgnegro d-flex align-items-center">
+	
+	<section id="seccion-a" class=" bgblanco d-flex align-items-center">
+
 		<div class="container  my-5">
 			<h2 class="col-md-10"><?php the_field( 'titulo_preview' ); ?></h2>
+
 			<div class="justify-content-center">
-			<?php the_field( 'preview' ); ?>
+
+				<?php the_field( 'preview' ); ?>
+
 			</div>
 		</div>
+
 	</section>
-<?php endif?>   
+	
+	<?php endif?>   
 	<!--fin primer bloque-->
 	<!--segundo bloque-->
-	 <?php if ( get_field( 'foto_de_autor') ) { ?>
-	<section id="seccion-b" class="bgblanco d-flex align-items-center">
+	<?php if ( get_field( 'foto_de_autor') ) { ?>
+	<section id="seccion-b" class=" bgnegro d-flex align-items-center">
 		<div class="container my-5">
-			<h2 class="col-md-10 textofondoblanco">Auteurs</h2>
+			<h2 class="col-md-10">Auteurs</h2>
 			<div class="row justify-content-center mb-3">
 				<div class="col-md-3 col-12">
 				  
@@ -94,8 +140,8 @@
 					
 				</div>
 				<div class="col-md-7 col-12 align-self-center">
-					<h3 class="textofondoblanco"><?php the_field( 'nombre_de_autor' ); ?></h3>
-					<p class="textofondoblanco text-justify"><?php the_field( 'bio_del_autor' ); ?>
+					<h3 class=""><?php the_field( 'nombre_de_autor' ); ?></h3>
+					<p class="text-justify"><?php the_field( 'bio_del_autor' ); ?>
 					</p>
 				</div>
 			</div>
@@ -107,8 +153,8 @@
 					<?php } ?>
 				</div>
 				<div class="col-md-7 col-12 align-self-center">
-					<h3 class="textofondoblanco"><?php the_field( 'nombre_de_autor_2' ); ?></h3>
-					<p class="textofondoblanco text-justify">
+					<h3 class=""><?php the_field( 'nombre_de_autor_2' ); ?></h3>
+					<p class=" text-justify">
 						<?php the_field( 'bio_del_autor_2' ); ?>
 					</p>
 				</div>
@@ -132,28 +178,7 @@
 	</section>
 	<?php endif?>
 	<!--fin tercero-->
-	<?php if( have_rows('prensa') ): ?>
-		<section id="prensa"  class="bgblanco d-flex align-items-center">
-			<div class="container">
-				<h3 class="textofondoblanco">Presse</h3>
-				<div class="row d-flex justify-content-center">
-					<?php while( have_rows('prensa') ): the_row(); ?>
-						<div class="col-md-10 nota">
-							<p class="txt-prensa textofondoblanco">
-								<i class="fa fa-quote-left" aria-hidden="true"></i>
-								<?php the_sub_field('extracto'); ?>
-								<i class="fa fa-quote-right" aria-hidden="true"></i>
-							</p>
-								
-							<h4 class="medio-prensa textofondoblanco">
-								<a href="<?php the_sub_field('link_del_medio'); ?>" target="blank"><?php the_sub_field('nombre_del_medio'); ?></a>
-							</h4>
-						</div>
-					<?php endwhile; ?>
-				</div>
-			</div>
-		</section>
-	<?php endif; ?>
+	
 	<!--fin cuarto-->
 </div><!-- fin main -->
 </div><!-- Fin wrapper --> 
