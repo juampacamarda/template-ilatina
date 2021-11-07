@@ -189,7 +189,7 @@ background-color: rgba(0, 0, 0, 0.2);
   .footer{
     position: relative;
     height: 100px;
-    margin-top: -100px;
+    margin-top: 0px;
   }
 }
 #post{
@@ -291,8 +291,13 @@ div#pagination-menu {
 }
 /*prensa libros*/
 section#prensa {
-    padding: 50px 0;
-}
+  padding: 50px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  }
 
 .nota {
     padding: 20px 15px;
@@ -404,4 +409,46 @@ div#newsletter {
     flex-wrap: wrap;
     align-items: center;
   }
+}
+
+a.nota-presse {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000000;
+  border-left: unset;
+  border-right: unset;
+  padding: 20px 0;
+  transition: all ease .6s;
+}
+
+a.nota-presse:hover {
+  border-top:2px solid;
+  border-bottom: 2px solid #fff;
+  text-decoration: unset;
+  color: #ffffff;
+}
+
+
+h4.medio-prensa {
+  border-top: 1px solid;
+  display: block;
+  width: 80%;
+  text-align: center;
+  padding-top: 15px;
+  margin: 0 auto;
+}
+
+header.home {
+  margin-bottom: 70px;
+}
+
+/*fix fotos autores*/
+.auteur-template-default #primero img {
+  filter: grayscale(1);
+  width: 100%;
+  height: auto;
 }
