@@ -24,7 +24,7 @@
 		<title><?php the_title(); ?> - ilatina </title>
 		<?php wp_head(); ?>
 	</head>
-	<body>
+	<body <?php body_class(); ?>>
 		<div id="wrapper" class="bgblanco">
 		<div id="main">
 				<section class="cabecera">

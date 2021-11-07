@@ -14,11 +14,11 @@
     <?php wp_head(); ?>
     
   </head>
-  <body>
+  <body <?php body_class(); ?>>
   <div id="wrapper" class="bgblanco">
   <div id="main">
     <header class="cabecera home">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light bgblanco fixed-top">
                         <?php
                             // Display the Custom Logo
                             the_custom_logo();
