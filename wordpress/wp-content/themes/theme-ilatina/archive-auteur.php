@@ -12,7 +12,7 @@
                       <?php if ( get_field( 'foto_de_autor') ) { ?>
                         <img src="<?php the_field( 'foto_de_autor' ); ?>" alt="Auteur" class="rounded-circle img-fluid" alt="imagen" />
                     <?php } ?>
-                    <span><h4 class="text-center">labeba<?php the_title(); ?></h4></span>
+                    <span><h4 class="text-center"><?php the_title(); ?></h4></span>
                     </a>
                   </div>
                 </div>
