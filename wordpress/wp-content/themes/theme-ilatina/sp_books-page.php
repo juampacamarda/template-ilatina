@@ -87,28 +87,7 @@ Template Name: special-book-plantilla
 			</div>
 	</section>
 	<!-- seccion prensa -->
-	<section id='prensa' class='bgnegro'>
-		<div class="container">
-    <h3 class="textofondoblanco">Presse</h3>
-			<div class="row">
-      <div class="row d-flex justify-content-center">
-					<?php while( have_rows('prensa') ): the_row(); ?>
-						<div class="col-md-6 nota">
-							<p class="txt-prensa textofondoblanco">
-								<i class="fa fa-quote-left" aria-hidden="true"></i>
-								<?php the_sub_field('extracto'); ?>
-								<i class="fa fa-quote-right" aria-hidden="true"></i>
-							</p>
-								
-							<h4 class="medio-prensa textofondoblanco">
-								<a href="<?php the_sub_field('link_del_medio'); ?>" target="blank"><?php the_sub_field('nombre_del_medio'); ?></a>
-							</h4>
-						</div>
-					<?php endwhile; ?>
-				</div>
-			</div>
-		</div>
-	</section>
+
 	<!--inicio primer bloque-->
  <?php if (get_field('titulo_preview')) : ?>
 	
@@ -129,7 +108,7 @@ Template Name: special-book-plantilla
  <?php endif?>   
 	<!--fin primer bloque-->
 	<!--segundo bloque-->
-	<?php if ( get_field( 'foto_de_autor') ) { ?>
+	<?php/* if ( get_field( 'foto_de_autor') ) { ?>
     <section id="seccion-b" class=" bgnegro d-flex align-items-center">
       <div class="container my-5">
         <h2 class="col-md-10">Auteurs</h2>
@@ -162,7 +141,7 @@ Template Name: special-book-plantilla
         <?php endif ?>
       </div>
     </section>
-	<?php } ?>
+	<?php }*/ ?>
 	<!--fin segundo bloque-->
 	<!--empieza tercer bloque-->
 	<?php if (get_field('titulo_de_video')) : ?>
@@ -178,28 +157,7 @@ Template Name: special-book-plantilla
     </section>
 	<?php endif?>
 	<!--fin tercero-->
-	<?php if( have_rows('prensa') ): ?>
-		<section id="prensa"  class="bgblanco d-flex align-items-center">
-			<div class="container">
-				<h3 class="textofondoblanco">Presse</h3>
-				<div class="row d-flex justify-content-center">
-					<?php while( have_rows('prensa') ): the_row(); ?>
-						<div class="col-md-10 nota">
-							<p class="txt-prensa textofondoblanco">
-								<i class="fa fa-quote-left" aria-hidden="true"></i>
-								<?php the_sub_field('extracto'); ?>
-								<i class="fa fa-quote-right" aria-hidden="true"></i>
-							</p>
-								
-							<h4 class="medio-prensa textofondoblanco">
-								<a href="<?php the_sub_field('link_del_medio'); ?>" target="blank"><?php the_sub_field('nombre_del_medio'); ?></a>
-							</h4>
-						</div>
-					<?php endwhile; ?>
-				</div>
-			</div>
-		</section>
-	<?php endif; ?>
+
 	<!--fin cuarto-->
 </div><!-- fin main -->
 </div><!-- Fin wrapper --> 
