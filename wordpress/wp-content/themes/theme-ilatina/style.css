@@ -19,24 +19,24 @@ html, body{
 }
 #main{
   overflow: auto;
-  padding-bottom: 60px;
+  /*padding-bottom: 60px;*/
 }
 .footer{
    position: relative;
    height: 60px;
-   margin-top: -60px;
    clear: both;
 }
+.footer img {
+  height: 100px!important;
+  width: auto;
+}
 @media screen and (min-width: 1900px) {
-  #main{
-  overflow: auto;
-  padding-bottom: 150px;
-}
-.footer{
-   position: relative;
-   height: 150px;
-   margin-top: -150px;
-}
+  
+  .footer{
+    position: relative;
+    height: 150px;
+    margin-top: -150px;
+  }
 }
 h3, h2, h1, h4, h5, .typo{
   font-family: Montserrat;
@@ -184,7 +184,6 @@ background-color: rgba(0, 0, 0, 0.2);
   }
   #main{
   overflow: auto;
-  padding-bottom: 100px;
   }
   .footer{
     position: relative;
@@ -451,4 +450,9 @@ header.home {
   filter: grayscale(1);
   width: 100%;
   height: auto;
+}
+/*en libros*/
+.libros-autores img {
+  width: 100%;
+  filter: grayscale(1);
 }

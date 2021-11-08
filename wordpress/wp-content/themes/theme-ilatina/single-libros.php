@@ -130,7 +130,7 @@
 	<!--fin primer bloque-->
 	<!--segundo bloque-->
 	<?php if ( get_field( 'foto_de_autor') ) { ?>
-	<section id="seccion-b" class=" bgnegro d-flex align-items-center">
+	<section id="seccion-b" class="libros-autores bgnegro d-flex align-items-center">
 		<div class="container my-5">
 			<h2 class="col-md-10">Auteurs</h2>
 			<div class="row justify-content-center mb-3">
